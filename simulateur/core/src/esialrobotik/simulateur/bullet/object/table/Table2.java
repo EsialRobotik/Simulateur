@@ -1,4 +1,4 @@
-package esialrobotik.simulateur.bullet.object;
+package esialrobotik.simulateur.bullet.object.table;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
@@ -16,30 +16,27 @@ import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody.btRigidBodyConstructionInfo;
 import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
 
-public class Box implements BulletObject{
+import esialrobotik.simulateur.bullet.object.BulletObject;
+
+public class Table2 implements BulletObject{
 	private Model model;
 	private ModelInstance instance;
 	private btCollisionShape boxShape;
 	private btRigidBodyConstructionInfo boxInfo;
 	private btDefaultMotionState boxMotionState;
 	private btRigidBody boxBody;
-	private Vector3 tempVector = new Vector3();
 
-	public Box() {
+	public Table2() {
 		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createBox(5f, 5f, 5f, 
-				new Material(ColorAttribute.createDiffuse(Color.PINK),
+		model = modelBuilder.createBox(2.150f, 0.10f, 0.022f, 
+				new Material(ColorAttribute.createDiffuse(Color.RED),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		instance = new ModelInstance(model);
-		instance.transform.trn(0f, 50f, 0f);
-		instance.transform.rotate(Vector3.X, 42f);
-		instance.transform.rotate(Vector3.Z, 42f);
-		boxShape = new btBoxShape(new Vector3(2.5f, 2.5f, 2.5f));
-		boxShape.calculateLocalInertia(1f, tempVector);
-		System.out.println(tempVector);
-		boxInfo = new btRigidBodyConstructionInfo(1f, null, boxShape, tempVector);
+		boxShape = new btBoxShape(new Vector3(1.075f, 0.05f, 0.011f));
+		instance.transform.translate(1.075f, 0.05f, 3.021f);
+		boxInfo = new btRigidBodyConstructionInfo(0f, null, boxShape, Vector3.Zero);
 		boxMotionState = new btDefaultMotionState();
 		boxMotionState.setWorldTransform(instance.transform);
 		boxBody = new btRigidBody(boxInfo);

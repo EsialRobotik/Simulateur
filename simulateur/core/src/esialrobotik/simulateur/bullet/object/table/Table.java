@@ -1,4 +1,4 @@
-package esialrobotik.simulateur.bullet.object;
+package esialrobotik.simulateur.bullet.object.table;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
@@ -11,59 +11,45 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.bullet.collision.btBoxShape;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionShape;
+import com.badlogic.gdx.physics.bullet.collision.btSphereShape;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody.btRigidBodyConstructionInfo;
 import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
 
-public class Ground implements BulletObject {
-	
+import esialrobotik.simulateur.bullet.object.BulletObject;
+
+public class Table implements BulletObject{
 	private Model model;
 	private ModelInstance instance;
-	private btCollisionShape groundShape;
-	private btRigidBodyConstructionInfo groundInfo;
-	private btDefaultMotionState groundMotionState;
-	private btRigidBody groundBody;
+	private btCollisionShape boxShape;
+	private btRigidBodyConstructionInfo boxInfo;
+	private btDefaultMotionState boxMotionState;
+	private btRigidBody boxBody;
 
-	public Ground() {
+	public Table() {
 		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createRect(
-				20f,
-				0f,
-				-20f,
-				-20f,
-				0f,
-				-20f,
-				-20f,
-				0f,
-				20f,
-				20f,
-				0f,
-				20f,
-				0,
-				1,
-				0,
-				new Material(ColorAttribute.createDiffuse(Color.BLUE),
+		model = modelBuilder.createBox(2.150f, 0.10f, 0.022f, 
+				new Material(ColorAttribute.createDiffuse(Color.RED),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		instance = new ModelInstance(model);
-		// Create the shapes and body construction infos
-		Vector3 tempVector = new Vector3();
-		groundShape = new btBoxShape(tempVector.set(20, 0, 20));
-		groundInfo = new btRigidBodyConstructionInfo(0f, null, groundShape, Vector3.Zero);
-		groundMotionState = new btDefaultMotionState();
-		groundMotionState.setWorldTransform(instance.transform);
-		groundBody = new btRigidBody(groundInfo);
-		groundBody.setMotionState(groundMotionState);
+		boxShape = new btBoxShape(new Vector3(1.075f, 0.05f, 0.011f));
+		instance.transform.translate(1.075f, 0.05f, 0.011f);
+		boxInfo = new btRigidBodyConstructionInfo(0f, null, boxShape, Vector3.Zero);
+		boxMotionState = new btDefaultMotionState();
+		boxMotionState.setWorldTransform(instance.transform);
+		boxBody = new btRigidBody(boxInfo);
+		boxBody.setMotionState(boxMotionState);
 	}
-
+	
 	@Override
 	public void dispose() {
 		model.dispose();
-		groundShape.dispose();
-		groundInfo.dispose();
-		groundMotionState.dispose();
-		groundBody.dispose();
+		boxShape.dispose();
+		boxInfo.dispose();
+		boxMotionState.dispose();
+		boxBody.dispose();
 	}
 
 	@Override
@@ -73,12 +59,11 @@ public class Ground implements BulletObject {
 
 	@Override
 	public btRigidBody getRigidBody() {
-		return groundBody;
+		return boxBody;
 	}
 
 	@Override
 	public void motion() {
-		this.groundMotionState.getWorldTransform(this.instance.transform);
+		this.boxMotionState.getWorldTransform(this.instance.transform);
 	}
-
 }
