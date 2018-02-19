@@ -11,7 +11,6 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.bullet.collision.btBoxShape;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionShape;
-import com.badlogic.gdx.physics.bullet.collision.btSphereShape;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody.btRigidBodyConstructionInfo;
 import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
@@ -28,14 +27,14 @@ public class Table4 implements BulletObject{
 
 	public Table4() {
 		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createBox(0.022f, 0.10f, 3.010f, 
+		model = modelBuilder.createBox(2.2f, 10f, 301.0f, 
 				new Material(ColorAttribute.createDiffuse(Color.RED),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		instance = new ModelInstance(model);
-		boxShape = new btBoxShape(new Vector3(0.011f, 0.05f, 1.505f));
-		instance.transform.translate(2.150f, 0.05f, 1.505f);
+		boxShape = new btBoxShape(new Vector3(1.1f, 5f, 150.5f));
+		instance.transform.translate(215.0f, 5f, 150.5f);
 		boxInfo = new btRigidBodyConstructionInfo(0f, null, boxShape, Vector3.Zero);
 		boxMotionState = new btDefaultMotionState();
 		boxMotionState.setWorldTransform(instance.transform);

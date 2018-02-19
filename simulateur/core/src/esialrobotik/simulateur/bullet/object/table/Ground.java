@@ -29,18 +29,18 @@ public class Ground implements BulletObject {
 	public Ground() {
 		ModelBuilder modelBuilder = new ModelBuilder();
 		model = modelBuilder.createRect(
-				-1.075f,
+				-107.5f,
 				0f,
-				-1.505f,
-				-1.075f,
+				-150.5f,
+				-107.5f,
 				0f,
-				1.505f,
-				1.075f,
+				150.5f,
+				107.5f,
 				0f,
-				1.505f,
-				1.075f,
+				150.5f,
+				107.5f,
 				0f,
-				-1.505f,
+				-150.5f,
 				0,
 				1,
 				0,
@@ -49,17 +49,17 @@ public class Ground implements BulletObject {
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		instance = new ModelInstance(model);
-		instance.transform.translate(new Vector3(1.075f, 0f, 1.505f));
+		instance.transform.translate(new Vector3(107.5f, 0f, 150.5f));
 		// Create the shapes and body construction infos
 		Vector3 tempVector = new Vector3();
-		groundShape = new btBoxShape(new Vector3(1.075f, 0f, 1.505f));
+		groundShape = new btBoxShape(new Vector3(107.5f, 0f, 150.5f));
 		groundInfo = new btRigidBodyConstructionInfo(0f, null, groundShape, Vector3.Zero);
 		groundMotionState = new btDefaultMotionState();
 		groundMotionState.setWorldTransform(instance.transform);
 		groundBody = new btRigidBody(groundInfo);
 		groundBody.setMotionState(groundMotionState);
-		groundBody.setRestitution(0.1f);
-		groundBody.setFriction(0.8f);
+		groundBody.setRestitution(0.8f);
+		//groundBody.setFriction(0.8f);
 	}
 
 	@Override

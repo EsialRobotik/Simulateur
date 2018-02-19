@@ -10,7 +10,6 @@ import com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.physics.bullet.collision.btBoxShape;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionShape;
 import com.badlogic.gdx.physics.bullet.collision.btSphereShape;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
@@ -30,22 +29,22 @@ public class EauUsee implements BulletObject{
 
 	public EauUsee(Color c) {
 		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createSphere(0.044f, 0.044f, 0.044f, 10, 10,
+		model = modelBuilder.createSphere(4.4f, 4.4f, 4.4f, 10, 10,
 				new Material(ColorAttribute.createDiffuse(c),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		instance = new ModelInstance(model);
-		instance.transform.trn(MathUtils.random()+0.05f, 0.27f, MathUtils.random()+0.05f);
-		boxShape = new btSphereShape(0.022f);
+		instance.transform.trn(3f+MathUtils.random()*50f, 27f, 3f+MathUtils.random()*50f);
+		boxShape = new btSphereShape(2.2f);
 		boxShape.calculateLocalInertia(0.020f, tempVector);
 		boxInfo = new btRigidBodyConstructionInfo(0.020f, null, boxShape, tempVector);
 		boxMotionState = new btDefaultMotionState();
 		boxMotionState.setWorldTransform(instance.transform);
 		boxBody = new btRigidBody(boxInfo);
-		boxBody.setAngularVelocity(new Vector3(MathUtils.random(0f, 1f), MathUtils.random(0f, 1f), MathUtils.random(0f, 1f)));
-		boxBody.setRestitution(6f);
-		boxBody.setFriction(0.0008f);
+		//boxBody.setAngularVelocity(new Vector3(MathUtils.random(0f, 0.1f), MathUtils.random(0f, 1f), MathUtils.random(0f, 1f)));
+		boxBody.setRestitution(1f);
+		//boxBody.setFriction(0.0008f);
 		boxBody.setMotionState(boxMotionState);
 	}
 	
@@ -71,5 +70,9 @@ public class EauUsee implements BulletObject{
 	@Override
 	public void motion() {
 		this.boxMotionState.getWorldTransform(this.instance.transform);
+		instance.transform.getTranslation(tempVector);
+		if(tempVector.y < -10f) {
+			boxBody.setMassProps(0, Vector3.Zero);
+		}
 	}
 }

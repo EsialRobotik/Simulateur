@@ -11,7 +11,6 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.bullet.collision.btBoxShape;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionShape;
-import com.badlogic.gdx.physics.bullet.collision.btSphereShape;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody.btRigidBodyConstructionInfo;
 import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
@@ -27,16 +26,16 @@ public class CubeConstruction implements BulletObject{
 
 	public CubeConstruction() {
 		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createBox(0.058f, 0.058f, 0.058f, 
+		model = modelBuilder.createBox(5.8f, 5.8f, 5.8f, 
 				new Material(ColorAttribute.createDiffuse(Color.PINK),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		instance = new ModelInstance(model);
-		instance.transform.trn(1f, 3f, 1.5f);
+		instance.transform.trn(100f, 300f, 150f);
 		instance.transform.rotate(Vector3.X, 42f);
 		instance.transform.rotate(Vector3.Z, 42f);
-		boxShape = new btBoxShape(new Vector3(0.029f, 0.029f, 0.029f));
+		boxShape = new btBoxShape(new Vector3(2.9f, 2.9f, 2.9f));
 		boxShape.calculateLocalInertia(1f, tempVector);
 		boxInfo = new btRigidBodyConstructionInfo(1f, null, boxShape, tempVector);
 		boxMotionState = new btDefaultMotionState();
