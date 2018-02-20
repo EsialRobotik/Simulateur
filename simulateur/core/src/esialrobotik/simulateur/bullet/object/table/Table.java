@@ -1,68 +1,65 @@
 package esialrobotik.simulateur.bullet.object.table;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.VertexAttributes.Usage;
-import com.badlogic.gdx.graphics.g3d.Material;
+import java.util.LinkedList;
+import java.util.List;
+
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
-import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
-import com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute;
-import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
-import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.physics.bullet.collision.btBoxShape;
-import com.badlogic.gdx.physics.bullet.collision.btCollisionShape;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
-import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody.btRigidBodyConstructionInfo;
-import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
 
 import esialrobotik.simulateur.bullet.object.BulletObject;
 
-public class Table implements BulletObject{
-	private Model model;
-	private ModelInstance instance;
-	private btCollisionShape boxShape;
-	private btRigidBodyConstructionInfo boxInfo;
-	private btDefaultMotionState boxMotionState;
-	private btRigidBody boxBody;
+public class Table extends BulletObject{
+	private Plateau plateau;
+	private List<BulletObject> rebords = new LinkedList<BulletObject>();
+	private List<ModelInstance> instances = new LinkedList<ModelInstance>();
+	private List<btRigidBody> bodies = new LinkedList<btRigidBody>();
+	private static float sizeX = 215.0f;
+	private static float sizeZ = 301.0f;
+	private static float hauteurRebord = 10f;
+	private static float epaisseurRebord = 2.2f;
 
 	public Table() {
-		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createBox(215.0f, 10f, 2.2f, 
-				new Material(ColorAttribute.createDiffuse(Color.RED),
-						ColorAttribute.createSpecular(Color.WHITE), 
-						FloatAttribute.createShininess(16f)),
-				Usage.Position | Usage.Normal);
-		instance = new ModelInstance(model);
-		boxShape = new btBoxShape(new Vector3(107.5f, 5f, 1.1f));
-		instance.transform.translate(107.5f, 5f, 1.1f);
-		boxInfo = new btRigidBodyConstructionInfo(0f, null, boxShape, Vector3.Zero);
-		boxMotionState = new btDefaultMotionState();
-		boxMotionState.setWorldTransform(instance.transform);
-		boxBody = new btRigidBody(boxInfo);
-		boxBody.setMotionState(boxMotionState);
+		super();
+		model = new Model();
+		plateau = new Plateau(sizeX, sizeZ);
+		rebords.add(new RebordsLargeur(sizeX, sizeZ, hauteurRebord, epaisseurRebord));
+		rebords.add(new RebordsLongueur(sizeX, sizeZ, hauteurRebord, epaisseurRebord));
+		instances.addAll(plateau.getInstance());
+		bodies.addAll(plateau.getRigidBody());
+		for (BulletObject object : rebords) {
+			instances.addAll(object.getInstance());
+			bodies.addAll(object.getRigidBody());
+		}
 	}
-	
+
 	@Override
 	public void dispose() {
-		model.dispose();
-		boxShape.dispose();
-		boxInfo.dispose();
-		boxMotionState.dispose();
-		boxBody.dispose();
+		super.dispose();
+		for (btRigidBody body : bodies) {
+			body.dispose();
+		}
+		plateau.dispose();
+		for (BulletObject bulletObject : rebords) {
+			bulletObject.dispose();	
+		}
 	}
 
 	@Override
-	public ModelInstance getInstance() {
-		return instance;
+	public List<ModelInstance> getInstance() {
+		return instances;
 	}
 
 	@Override
-	public btRigidBody getRigidBody() {
-		return boxBody;
+	public List<btRigidBody> getRigidBody() {
+		return bodies;
 	}
 
 	@Override
 	public void motion() {
-		this.boxMotionState.getWorldTransform(this.instance.transform);
+		plateau.motion();
+		for (BulletObject bulletObject : rebords) {
+			bulletObject.motion();	
+		}
 	}
 }

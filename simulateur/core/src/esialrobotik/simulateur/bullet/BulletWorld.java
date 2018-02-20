@@ -21,17 +21,14 @@ import com.badlogic.gdx.physics.bullet.collision.btDefaultCollisionConfiguration
 import com.badlogic.gdx.physics.bullet.dynamics.btConstraintSolver;
 import com.badlogic.gdx.physics.bullet.dynamics.btDiscreteDynamicsWorld;
 import com.badlogic.gdx.physics.bullet.dynamics.btDynamicsWorld;
+import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.dynamics.btSequentialImpulseConstraintSolver;
 
 import esialrobotik.simulateur.bullet.object.BulletObject;
 import esialrobotik.simulateur.bullet.object.CubeConstruction;
 import esialrobotik.simulateur.bullet.object.Robot;
 import esialrobotik.simulateur.bullet.object.eau.EauUsee;
-import esialrobotik.simulateur.bullet.object.table.Ground;
 import esialrobotik.simulateur.bullet.object.table.Table;
-import esialrobotik.simulateur.bullet.object.table.Table2;
-import esialrobotik.simulateur.bullet.object.table.Table3;
-import esialrobotik.simulateur.bullet.object.table.Table4;
 
 public class BulletWorld {
 	private PerspectiveCamera cam;
@@ -51,7 +48,6 @@ public class BulletWorld {
 		Bullet.init();
 		modelBatch = new ModelBatch();
         cam = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        //cam.position.set(1.075f, 2.5f, 1.505f);
         cam.position.set(0f, 250f, 0f);
         cam.lookAt(107.5f, 0f, 150.5f);
         cam.near = 10f;
@@ -60,18 +56,9 @@ public class BulletWorld {
         // Create the box
         objects = new LinkedList<BulletObject>();
         objects.add(new Robot());
-        for (int i = 0; i < 16; i++) {
-        	objects.add(new EauUsee(Color.ORANGE));			
-		}
-        for (int i = 0; i < 16; i++) {
-        	objects.add(new EauUsee(Color.GREEN));			
-		}
+        objects.add(new EauUsee(Color.ORANGE));
         objects.add(new CubeConstruction());
-        objects.add(new Ground());
         objects.add(new Table());
-        objects.add(new Table2());
-        objects.add(new Table3());
-        objects.add(new Table4());
         // Create environment (lights)
         environment = new Environment();
         environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1f));
@@ -89,8 +76,11 @@ public class BulletWorld {
 		collisionWorld = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
 		collisionWorld.setGravity(gravity);
 		for (BulletObject bulletObject : objects) {
-			if(bulletObject.getRigidBody() != null)
-				collisionWorld.addRigidBody(bulletObject.getRigidBody());
+			if(bulletObject.getRigidBody() != null) {
+				for (btRigidBody body : bulletObject.getRigidBody()) {
+					collisionWorld.addRigidBody(body);					
+				}
+			}
 		}
 	}
 
