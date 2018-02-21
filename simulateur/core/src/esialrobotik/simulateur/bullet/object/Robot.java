@@ -15,9 +15,12 @@ import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
 
 public class Robot extends BulletObject{
 	private static float size = 30f;
+	private int move = 10;
+	private Vector3 moveit;
 
 	public Robot() {
 		super();
+		moveit = new Vector3(0f, 0f, 0f);
 		ModelBuilder modelBuilder = new ModelBuilder();
 		model = modelBuilder.createBox(size, size, size, 
 				new Material(ColorAttribute.createDiffuse(Color.PINK),
@@ -35,5 +38,14 @@ public class Robot extends BulletObject{
 		boxBody.setMotionState(boxMotionState);
 		addInstance(instance, boxShape, boxInfo, boxMotionState, boxBody);
 	}
-
+	@Override
+	public void motion() {
+		super.motion();
+		move -= 1;
+		if(move < 0) {
+			moveit = new Vector3(-50f+(float)Math.random()*100f, 0f, -50f+(float)Math.random()*100f);
+			super.bodies.get(0).applyCentralImpulse(moveit);
+			move = 5;
+		}
+	}
 }

@@ -28,6 +28,8 @@ import esialrobotik.simulateur.bullet.object.BulletObject;
 import esialrobotik.simulateur.bullet.object.CubeConstruction;
 import esialrobotik.simulateur.bullet.object.Robot;
 import esialrobotik.simulateur.bullet.object.eau.EauUsee;
+import esialrobotik.simulateur.bullet.object.eau.Loquet;
+import esialrobotik.simulateur.bullet.object.eau.Tubes;
 import esialrobotik.simulateur.bullet.object.table.Table;
 
 public class BulletWorld {
@@ -59,6 +61,8 @@ public class BulletWorld {
         objects.add(new EauUsee(Color.ORANGE));
         objects.add(new CubeConstruction());
         objects.add(new Table());
+        objects.add(new Tubes(3.1177f, 35));
+        objects.add(new Loquet());
         // Create environment (lights)
         environment = new Environment();
         environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1f));

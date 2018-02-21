@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.bullet.collision.btSphereShape;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody.btRigidBodyConstructionInfo;
@@ -20,10 +19,10 @@ public class EauUsee extends BulletObject{
 	private static float size = 4.4f;
 	private Color[] colors = new Color[]{Color.ORANGE, Color.GREEN};
 	private float[][] positions = new float[][] {
-			{84f, 27f, 0f}, // GREEN
+			{84f, 27f, 7.2f}, // GREEN
 			{200f, 27f, 61f}, // MIXTE
 			{200f, 27f, 239f}, //MIXTE
-			{84f, 27f, 301f} //ORANGE
+			{84f, 27f, 293.8f} //ORANGE
 	};
 
 	public EauUsee(Color c) {
@@ -76,8 +75,8 @@ public class EauUsee extends BulletObject{
 				boxMotionState.setWorldTransform(instance.transform);
 				btRigidBody boxBody = new btRigidBody(boxInfo);
 				//boxBody.setAngularVelocity(new Vector3(MathUtils.random(0f, 0.1f), MathUtils.random(0f, 1f), MathUtils.random(0f, 1f)));
-				boxBody.setRestitution(1f);
-				//boxBody.setFriction(0.0008f);
+				boxBody.setRestitution(0.95f);
+				boxBody.setFriction(0.0008f);
 				boxBody.setMotionState(boxMotionState);
 				addInstance(instance, boxShape, boxInfo, boxMotionState, boxBody);
 			}
