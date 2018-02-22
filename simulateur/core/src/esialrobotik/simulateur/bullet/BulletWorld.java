@@ -4,7 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
 import com.badlogic.gdx.graphics.g3d.Environment;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
@@ -27,13 +29,14 @@ import com.badlogic.gdx.physics.bullet.dynamics.btSequentialImpulseConstraintSol
 import esialrobotik.simulateur.bullet.object.BulletObject;
 import esialrobotik.simulateur.bullet.object.CubeConstruction;
 import esialrobotik.simulateur.bullet.object.Robot;
+import esialrobotik.simulateur.bullet.object.chateaudeau.ChateauDEau;
 import esialrobotik.simulateur.bullet.object.eau.EauUsee;
 import esialrobotik.simulateur.bullet.object.eau.Loquet;
 import esialrobotik.simulateur.bullet.object.eau.Tubes;
 import esialrobotik.simulateur.bullet.object.table.Table;
 
 public class BulletWorld {
-	private PerspectiveCamera cam;
+	private Camera cam;
 	private List<BulletObject> objects;
 	private ModelBatch modelBatch;
 	private Environment environment;
@@ -45,12 +48,19 @@ public class BulletWorld {
 	btDynamicsWorld collisionWorld;
 	Vector3 gravity = new Vector3(0, -981f, 0);
 	Vector3 tempVector = new Vector3();
+	private boolean perspective = false;
 	
 	public BulletWorld() {
 		Bullet.init();
 		modelBatch = new ModelBatch();
-        cam = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        cam.position.set(0f, 250f, 0f);
+		if(perspective) {
+			cam = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+			cam.position.set(0f, 250f, 0f);
+		}else {
+			cam = new OrthographicCamera(Gdx.graphics.getWidth()/3, Gdx.graphics.getHeight()/3);
+			cam.position.set(107.5f, 250f, 150.5f);
+	        cam.rotateAround(cam.position, Vector3.Y, -90f);
+		}
         cam.lookAt(107.5f, 0f, 150.5f);
         cam.near = 10f;
         cam.far = 500f;
@@ -58,6 +68,7 @@ public class BulletWorld {
         // Create the box
         objects = new LinkedList<BulletObject>();
         objects.add(new Robot());
+        objects.add(new ChateauDEau());
         objects.add(new EauUsee(Color.ORANGE));
         objects.add(new CubeConstruction());
         objects.add(new Table());
@@ -69,7 +80,7 @@ public class BulletWorld {
         environment.add(new DirectionalLight().set(0.8f, 0.8f, 0.8f, -1f, -0.8f, -0.2f));
         // Controller camera
         camController = new CameraInputController(cam);
-        //camController.scrollFactor = 0.01f;
+        camController.scrollFactor = 2f;
         camController.target = new Vector3(107.5f, 0f, 150.5f);
         Gdx.input.setInputProcessor(camController);
     	// Create the bullet world
@@ -101,8 +112,10 @@ public class BulletWorld {
 	}
 
 	public void update() {
-		collisionWorld.debugDrawWorld();
-		((btDynamicsWorld)collisionWorld).stepSimulation(Gdx.graphics.getDeltaTime()*0.1f,0);
+		//((btDynamicsWorld)collisionWorld).stepSimulation(Gdx.graphics.getDeltaTime()*0.5f,1);
+		final float delta = Math.min(1f / 30f, Gdx.graphics.getDeltaTime());
+
+		((btDynamicsWorld)collisionWorld).stepSimulation(delta, 100, 1f/600f);
         modelBatch.begin(cam);
         for (BulletObject bulletObject : objects) {
             modelBatch.render(bulletObject.getInstance(), environment);

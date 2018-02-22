@@ -1,4 +1,4 @@
-package esialrobotik.simulateur.bullet.object.table;
+package esialrobotik.simulateur.bullet.object.chateaudeau;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
@@ -17,21 +17,19 @@ import esialrobotik.simulateur.bullet.object.BulletObject;
 
 public class RebordsLongueur extends BulletObject{
 
-	public RebordsLongueur(float tableSizeX, float tableSizeZ, float hauteurRebord, float epaisseurRebord) {
-		float sizeX = epaisseurRebord;
-		float sizeY = hauteurRebord;
-		float sizeZ = tableSizeZ;
-		float tableX = tableSizeX;
+	public RebordsLongueur(float sizeX, float sizeZ, float hauteur, float epaisseur, float posX, float posZ, Color c) {
 		ModelBuilder modelBuilder = new ModelBuilder();
-		model = modelBuilder.createBox(sizeX, sizeY, sizeZ, 
-				new Material(ColorAttribute.createDiffuse(Color.GRAY),
+		model = modelBuilder.createBox(epaisseur, hauteur, sizeZ, 
+				new Material(ColorAttribute.createDiffuse(c),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		// Longueur 1
 		ModelInstance instance = new ModelInstance(model);
-		btBoxShape boxShape = new btBoxShape(new Vector3(sizeX/2f, sizeY/2f, sizeZ/2f));
-		instance.transform.translate(sizeX/2f-sizeX, sizeY/2f, sizeZ/2f);
+		btBoxShape boxShape = new btBoxShape(new Vector3(epaisseur/2f, hauteur/2f, sizeZ/2f));
+		instance.transform.translate(epaisseur/2f, hauteur/2f, sizeZ/2f);
+		instance.transform.scale(1f, 1.5f, 1f);
+		instance.transform.trn(posX, 10f, posZ);
 		btRigidBodyConstructionInfo boxInfo = new btRigidBodyConstructionInfo(0f, null, boxShape, Vector3.Zero);
 		btDefaultMotionState boxMotionState = new btDefaultMotionState();
 		boxMotionState.setWorldTransform(instance.transform);
@@ -40,7 +38,8 @@ public class RebordsLongueur extends BulletObject{
 		addInstance(instance, boxShape, boxInfo, boxMotionState, boxBody);
 		// Longueur 2
 		ModelInstance instance2 = new ModelInstance(model);
-		instance2.transform.translate(tableX+sizeX/2f, sizeY/2f, sizeZ/2f);
+		instance2.transform.translate(sizeX, hauteur/2f, sizeZ/2f);
+		instance2.transform.trn(posX, 0f, posZ);
 		btDefaultMotionState boxMotionState2 = new btDefaultMotionState();
 		boxMotionState2.setWorldTransform(instance2.transform);
 		btRigidBody boxBody2 = new btRigidBody(boxInfo);

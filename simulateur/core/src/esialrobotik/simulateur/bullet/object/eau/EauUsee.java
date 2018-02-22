@@ -74,9 +74,9 @@ public class EauUsee extends BulletObject{
 				btMotionState boxMotionState = new btDefaultMotionState();
 				boxMotionState.setWorldTransform(instance.transform);
 				btRigidBody boxBody = new btRigidBody(boxInfo);
-				//boxBody.setAngularVelocity(new Vector3(MathUtils.random(0f, 0.1f), MathUtils.random(0f, 1f), MathUtils.random(0f, 1f)));
-				boxBody.setRestitution(0.95f);
-				boxBody.setFriction(0.0008f);
+				boxBody.setRestitution(1f-1e-4f);
+				boxBody.setFriction(0.2f);
+				boxBody.setRollingFriction(0.1f);
 				boxBody.setMotionState(boxMotionState);
 				addInstance(instance, boxShape, boxInfo, boxMotionState, boxBody);
 			}

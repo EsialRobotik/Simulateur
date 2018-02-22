@@ -1,4 +1,4 @@
-package esialrobotik.simulateur.bullet.object.table;
+package esialrobotik.simulateur.bullet.object.chateaudeau;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
@@ -15,9 +15,9 @@ import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
 
 import esialrobotik.simulateur.bullet.object.BulletObject;
 
-public class Plateau extends BulletObject {
+public class Fond extends BulletObject {
 
-	public Plateau(float x, float z) {
+	public Fond(float x, float z, float posX, float posZ, Color c) {
 		super();
 		ModelBuilder modelBuilder = new ModelBuilder();
 		model = modelBuilder.createRect(
@@ -36,20 +36,21 @@ public class Plateau extends BulletObject {
 				0,
 				1,
 				0,
-				new Material(ColorAttribute.createDiffuse(Color.GRAY),
+				new Material(ColorAttribute.createDiffuse(c),
 						ColorAttribute.createSpecular(Color.WHITE), 
 						FloatAttribute.createShininess(16f)),
 				Usage.Position | Usage.Normal);
 		ModelInstance instance = new ModelInstance(model);
 		instance.transform.translate(new Vector3(x/2f, 0f, z/2f));
+		instance.transform.translate(posX, 0f, posZ);
 		btBoxShape groundShape = new btBoxShape(new Vector3(x/2f, 0f, z/2f));
 		btRigidBodyConstructionInfo groundInfo = new btRigidBodyConstructionInfo(0f, null, groundShape, Vector3.Zero);
 		btDefaultMotionState groundMotionState = new btDefaultMotionState();
 		groundMotionState.setWorldTransform(instance.transform);
 		btRigidBody groundBody = new btRigidBody(groundInfo);
 		groundBody.setMotionState(groundMotionState);
-		groundBody.setRestitution(1f);
-		groundBody.setFriction(0.2f);
+		groundBody.setRestitution(0.8f);
+		//groundBody.setFriction(0.8f);
 		addInstance(instance, groundShape, groundInfo, groundMotionState, groundBody);
 	}
 

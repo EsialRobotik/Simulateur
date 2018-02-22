@@ -45,7 +45,7 @@ public class Robot extends BulletObject{
 		if(move < 0) {
 			moveit = new Vector3(-50f+(float)Math.random()*100f, 0f, -50f+(float)Math.random()*100f);
 			super.bodies.get(0).applyCentralImpulse(moveit);
-			move = 5;
+			move = 1;
 		}
 	}
 }

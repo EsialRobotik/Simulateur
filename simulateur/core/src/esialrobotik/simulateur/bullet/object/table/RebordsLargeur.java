@@ -40,7 +40,7 @@ public class RebordsLargeur extends BulletObject{
 		addInstance(instance, boxShape, boxInfo, boxMotionState, boxBody);
 		// Largeur 2
 		ModelInstance instance2 = new ModelInstance(model);
-		instance2.transform.translate(sizeX/2f, sizeY/2f, tableZ);
+		instance2.transform.translate(sizeX/2f, sizeY/2f, tableZ+sizeZ/2f);
 		btDefaultMotionState boxMotionState2 = new btDefaultMotionState();
 		boxMotionState2.setWorldTransform(instance2.transform);
 		btRigidBody boxBody2 = new btRigidBody(boxInfo);
