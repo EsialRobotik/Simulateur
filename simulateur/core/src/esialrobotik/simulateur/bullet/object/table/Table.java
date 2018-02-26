@@ -34,6 +34,8 @@ public class Table extends BulletObject{
 		for (btRigidBody body : bodies) {
 			body.dispose();
 		}
+		for (BulletObject object : objects) {
+			object.dispose();
 		}
 	}
 
@@ -49,6 +51,7 @@ public class Table extends BulletObject{
 
 	@Override
 	public void motion() {
+		for (BulletObject bulletObject : objects) {
 			bulletObject.motion();	
 		}
 	}
