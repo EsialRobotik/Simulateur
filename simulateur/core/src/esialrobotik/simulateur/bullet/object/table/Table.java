@@ -10,10 +10,7 @@ import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import esialrobotik.simulateur.bullet.object.BulletObject;
 
 public class Table extends BulletObject{
-	private Plateau plateau;
-	private List<BulletObject> rebords = new LinkedList<BulletObject>();
-	private List<ModelInstance> instances = new LinkedList<ModelInstance>();
-	private List<btRigidBody> bodies = new LinkedList<btRigidBody>();
+	private List<BulletObject> objects = new LinkedList<BulletObject>();
 	private static float sizeX = 215.0f;
 	private static float sizeZ = 301.0f;
 	private static float hauteurRebord = 10f;
@@ -22,26 +19,21 @@ public class Table extends BulletObject{
 	public Table() {
 		super();
 		model = new Model();
-		plateau = new Plateau(sizeX, sizeZ);
-		rebords.add(new RebordsLargeur(sizeX, sizeZ, hauteurRebord, epaisseurRebord));
-		rebords.add(new RebordsLongueur(sizeX, sizeZ, hauteurRebord, epaisseurRebord));
-		instances.addAll(plateau.getInstance());
-		bodies.addAll(plateau.getRigidBody());
-		for (BulletObject object : rebords) {
+		objects.add(new Plateau(sizeX, sizeZ));
+		objects.add(new RebordsLargeur(sizeX, sizeZ, hauteurRebord, epaisseurRebord));
+		objects.add(new RebordsLongueur(sizeX, sizeZ, hauteurRebord, epaisseurRebord));
+		for (BulletObject object : objects) {
 			instances.addAll(object.getInstance());
 			bodies.addAll(object.getRigidBody());
 		}
 	}
-
+	
 	@Override
 	public void dispose() {
 		super.dispose();
 		for (btRigidBody body : bodies) {
 			body.dispose();
 		}
-		plateau.dispose();
-		for (BulletObject bulletObject : rebords) {
-			bulletObject.dispose();	
 		}
 	}
 
@@ -57,8 +49,6 @@ public class Table extends BulletObject{
 
 	@Override
 	public void motion() {
-		plateau.motion();
-		for (BulletObject bulletObject : rebords) {
 			bulletObject.motion();	
 		}
 	}

@@ -100,15 +100,15 @@ public class BulletWorld {
 	}
 
 	public void dispose() {
-		for (BulletObject bulletObject : objects) {
-			bulletObject.dispose();
-		}
 		modelBatch.dispose();
 		collisionWorld.dispose();
 		solver.dispose();
 		broadphase.dispose();
 		dispatcher.dispose();
 		collisionConfiguration.dispose();
+		for (BulletObject bulletObject : objects) {
+			bulletObject.dispose();
+		}
 	}
 
 	public void update() {
