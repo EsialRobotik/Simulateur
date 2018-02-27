@@ -3,7 +3,7 @@ package esialrobotik.simulateur.asserv;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class FakeAsserv {
+public abstract class Asserv {
 
 	/**
 	 * Décode une séquence d'instructions séparées (ou non) par des retours à la ligne
@@ -208,12 +208,5 @@ public class FakeAsserv {
 	public String position() {
 		System.out.println("POSITION");
 		return "";
-	}
-	
-	public static void main(String[] args) {
-		String sequence = "g100#33\nc1g\nh\nr\ng100#45\ne115#46\nt30\nv45\nf45#36\np";
-		FakeAsserv fa = new FakeAsserv();
-		boolean res = fa.decode_serie(sequence);
-		System.out.println(res);
 	}
 }

@@ -7,6 +7,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
+import esialrobotik.simulateur.asserv.AsservCreator;
+import esialrobotik.simulateur.asserv.AsservCreator.TypeAsserv;
+import esialrobotik.simulateur.asserv.Asserv;
+import esialrobotik.simulateur.asserv.FakeAsservCreator;
 import esialrobotik.simulateur.bullet.BulletWorld;
 import esialrobotik.simulateur.camera.SimulateurCamera;
 import esialrobotik.simulateur.simu2D.World2D;
@@ -32,6 +36,11 @@ public class Simulateur extends ApplicationAdapter {
 		uiCam.update();
 		world2D = new World2D(h, w);
 		world3D = new BulletWorld();
+		AsservCreator fac = new FakeAsservCreator();
+		Asserv fa = fac.createAsserv(TypeAsserv.BULLET);
+		String sequence = "g100#33\nc1g\nh\nr\ng100#45\ne115#46\nt30\nv45\nf45#36\np";
+		boolean res = fa.decode_serie(sequence);
+		System.out.println(res);
 	}
 
 	@Override
