@@ -49,7 +49,7 @@ public class Plateau extends BulletObject {
 		btRigidBody groundBody = new btRigidBody(groundInfo);
 		groundBody.setMotionState(groundMotionState);
 		groundBody.setRestitution(1f);
-		groundBody.setFriction(0.2f);
+		groundBody.setFriction(0f);
 		addInstance(instance, groundShape, groundInfo, groundMotionState, groundBody);
 	}
 
