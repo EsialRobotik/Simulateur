@@ -48,7 +48,7 @@ public class BulletWorld {
 	btDynamicsWorld collisionWorld;
 	Vector3 gravity = new Vector3(0, -981f, 0);
 	Vector3 tempVector = new Vector3();
-	private boolean perspective = false;
+	private boolean perspective = true;
 	
 	public BulletWorld() {
 		Bullet.init();
