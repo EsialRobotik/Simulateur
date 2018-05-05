@@ -15,25 +15,37 @@ import com.badlogic.gdx.physics.bullet.linearmath.btDefaultMotionState;
 
 public class Robot extends BulletObject{
 	private static final float size = 30f;
-	private int move = 10;
 	private Vector3 moveit;
-	private Vector3 lastPosition = new Vector3(size/2f, 0f, size/2f);
-	private static final float entraxeCod = 15f;
-	private static final float codOffsetY = 0f;
-	private static final float codOffsetX = 0f;
-	private static final float codOffsetZ = 0f;
-	private float tick = 0f;
-	private float consigne = 30f;
-	private float errorCod = 0f;
-	private float sumErrorCod = 0f;
-	private float lastErrorCod = 0f;
-	private float commandeCod = 0f;
-	private int stable = 0;
-	private final float Kp = 100f;
-	private final float Ki = 0.001f;
-	private final float Kd = 50f;
-	private final float erreurAdmissible = 0.0001f;
-	private final int asservStable = 1;
+	private Vector3 rotit;
+	
+	// Asservissement Position
+	private final float posKp = 100f;
+	private final float posKi = 0.001f;
+	private final float posKd = 50f;
+	private final float posErreurAdmissible = 0.0001f;
+	private final int posAsservStable = 1;
+	private Vector3 posLast = new Vector3(size/2f, 0f, size/2f);
+	private float posTick = 0f;
+	private float posConsigne = 30f;
+	private float posError = 0f;
+	private float posSumError = 0f;
+	private float posLastError = 0f;
+	private float posCommande = 0f;
+	private int posStable = 0;
+	// Asservissement Angle
+	private final float angKp = 100f;
+	private final float angKi = 0.001f;
+	private final float angKd = 50f;
+	private final float angErreurAdmissible = 0.0001f;
+	private final int angAsservStable = 1;
+	private float angLast = 0f;
+	private float angTick = 0f;
+	private float angConsigne = -360f;
+	private float angError = 0f;
+	private float angSumError = 0f;
+	private float angLastError = 0f;
+	private float angCommande = 0f;
+	private int angStable = 0;
 	private static int initFrames = 50; // Wait for 10 frames before doing anything
 
 	public Robot() {
@@ -60,7 +72,8 @@ public class Robot extends BulletObject{
 	}
 	
 	private void updatePositions() {
-		lastPosition = super.bodies.get(0).getCenterOfMassPosition().cpy();
+		posLast = super.bodies.get(0).getCenterOfMassPosition().cpy();
+		angLast = getDirection();
 	}
 	
 	private float getDirection() {
@@ -69,14 +82,16 @@ public class Robot extends BulletObject{
 	
 	private void updateTicks() {
 		//updatePositions();
-		tick = (consigne < 0 ? -1f : 1f) * super.bodies.get(0).getCenterOfMassPosition().dst(lastPosition);
+		posTick = (posConsigne < 0 ? -1f : 1f) * super.bodies.get(0).getCenterOfMassPosition().dst(posLast);
+		angTick = (super.bodies.get(0).getOrientation().getYaw() - angLast)%360f;//*(angConsigne < 0 ? -1f : 1f))%360f;
+		//Math.
 	}
 	
 	public void resetAll() {
-		tick = 0f;
-		sumErrorCod = 0f;
-		commandeCod = 0f;
-		lastErrorCod = errorCod;
+		posTick = 0f;
+		posSumError = 0f;
+		posCommande = 0f;
+		posLastError = posError;
 		updatePositions();
 	}
 	
@@ -88,30 +103,47 @@ public class Robot extends BulletObject{
 		 * commande = Kp * erreur + Ki * somme_erreurs + Kd * variation_erreur;
 		 * erreur_précédente = erreur
 		 **/
-		if(stable >= asservStable) {
+		if(posStable >= posAsservStable) {
 			resetAll();
 			move(Vector3.Zero);
 			return true;
 		}
-		float error = consigne - tick;
-		errorCod = (error < erreurAdmissible && error > erreurAdmissible) ? 0f : error;
-		sumErrorCod += errorCod;
-		commandeCod = Kp * errorCod + Ki * sumErrorCod + Kd * (errorCod - lastErrorCod);
-		lastErrorCod = errorCod;
-		if(Math.abs(errorCod) <= 0.2f) {
-			stable += 1;
+		float error = posConsigne - posTick;
+		posError = (error < posErreurAdmissible && error > posErreurAdmissible) ? 0f : error;
+		posSumError += posError;
+		posCommande = posKp * posError + posKi * posSumError + posKd * (posError - posLastError);
+		posLastError = posError;
+		if(Math.abs(posError) <= 0.2f) {
+			posStable += 1;
+		}
+		error = angConsigne - angTick;
+		angError = (error < angErreurAdmissible && error > angErreurAdmissible) ? 0f : error;
+		angSumError += angError;
+		angCommande = angKp * angError + angKi * angSumError + angKd * (angError - angLastError);
+		angLastError = angError;
+		if(Math.abs(angError) <= 0.2f) {
+			angStable += 1;
 		}
 		return false;
 	}
 	
 	private void move(Vector3 nextPosition) {
-		if(moveit.len2() <= 10) {
-			super.bodies.get(0).setAngularVelocity(Vector3.Zero);
+		if(nextPosition.len2() <= 10) {
 			super.bodies.get(0).setLinearVelocity(Vector3.Zero);
 		}else {
-			super.bodies.get(0).applyCentralImpulse(moveit);
+			super.bodies.get(0).applyCentralImpulse(nextPosition);
 		}
 		super.bodies.get(0).setLinearVelocity(super.bodies.get(0).getLinearVelocity().limit2(1000.0f));
+	}
+	
+	private void rot(float nextAngle) {
+		if(Math.abs(nextAngle) <= 1) {
+			super.bodies.get(0).setAngularVelocity(Vector3.Zero);
+		}else {
+			Vector3 torque = new Vector3(0, nextAngle, 0);
+			super.bodies.get(0).applyTorqueImpulse(torque);
+		}
+		super.bodies.get(0).setAngularVelocity(super.bodies.get(0).getAngularVelocity().limit2(10.0f));
 	}
 	
 	@Override
@@ -129,13 +161,16 @@ public class Robot extends BulletObject{
 			updateTicks();
 			if(true || initFrames%5==0) {
 				if(asserv()) {
-					consigne = consigne == 30f ? -30f : 30f;
-					stable = 0;
-					System.out.println(consigne);
+					posConsigne = posConsigne == 30f ? -30f : 30f;
+					posStable = 0;
+					System.out.println(posConsigne);
 				}
-				moveit = new Vector3(commandeCod, 0f, 0f);
+				System.out.println(angError);
+				moveit = new Vector3(posCommande, 0f, 0f);
 				moveit.rotate(Vector3.Y, getDirection());
 				move(moveit);
+				//rotit = new Vector3(0f, angCommande, 0f);
+				rot(angCommande);
 			}
 		}
 	}
