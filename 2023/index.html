@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrincessVisu</title>
+
+    <link rel="stylesheet" href="../libs/visualisatorRotated.css">
+
+    <!-- https://createjs.com - Voir EaselJs pour le canvas et TweenJs pour les animations -->
+    <script src="../libs/createjs.min.js"></script>
+    <script src="../libs/tweenjs.min.js"></script>
+    <script src="../libs/geometric.js"></script>
+    <script src="../libs/visualisator.js"></script>
+    <script src="variables.js"></script>
+
+</head>
+<body onload="init({x: 1775, y: 2800, theta: (Math.PI * 0), regX: 150, regY: 145}, {x: 1300, y: 220, theta: Math.PI, regX: 150, regY: 75});">
+
+<div class="outsideWrapper">
+    <div class="insideWrapper">
+        <img src="table.svg" class="coveredImage">
+        <canvas id="canvas" class="coveringCanvas" width="2000" height="3000"></canvas>
+    </div>
+</div>
+
+<div class="configBlock">
+    <div class="formBlock">
+        <fieldset>
+            <legend>Configuration</legend>
+            <div>
+                <button onclick="loadTable(jsonTable, true)">Table</button>
+            </div>
+            <div>
+                <button onclick="loadSimulatorStrat(strategyBig0)">Strat Big 0</button>
+                <button onclick="loadSimulatorStrat(strategyBig3000)">Strat Big 2000</button>
+            </div>
+            <div>
+                <button onclick="loadSimulatorStratPmi(strategySmall0)">Strat Small 0</button>
+                <button onclick="loadSimulatorStratPmi(strategySmall3000)">Strat Small 2000</button>
+            </div>
+        </fieldset>
+    </div>
+
+    <form id="formTable" name="formTable" class="formBlock" onsubmit="event.preventDefault(); loadFiles();">
+        <fieldset>
+            <legend>Configuration</legend>
+            <div>
+                <input type="file"
+                       id="stratLog" name="stratLog"
+                       class="inputfile"
+                       data-multiple-caption="{count} files selected"/>
+                <label for="stratLog"><span>Strat Log Princess</span></label>
+                <input type="file"
+                       id="stratPmiLog" name="stratPmiLog"
+                       class="inputfile"
+                       data-multiple-caption="{count} files selected"/>
+                <label for="stratPmiLog"><span>Strat Log PMI</span></label>
+                <input type="file"
+                       id="tblCheck" name="tblCheck"
+                       class="inputfile"
+                       data-multiple-caption="{count} files selected"/>
+                <label for="tblCheck"><span>Check tbl</span></label>
+            </div>
+
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="instructionsBlock">
+        <fieldset>
+            <legend>Instructions</legend>
+            <table>
+                <tr>
+                    <th>Princess</th>
+                    <th>PMI</th>
+                    <th>Autre</th>
+                </tr>
+                <tr>
+                    <td><button id="princessNext" onclick="nextInstruction();" disabled>Suivant</button></td>
+                    <td><button id="pmiNext" onclick="nextInstructionPmi();" disabled>Suivant</button></td>
+                    <td><button onclick="connectSocket();">Live</button></td>
+                </tr>
+                <tr>
+                    <td><button id="princessAuto" onclick="autoPlay();" disabled>Automatique</button></td>
+                    <td><button id="pmiAuto" onclick="autoPlayPmi();" disabled>Automatique</button></td>
+                    <td><button onclick="autoPlay();autoPlayPmi();">Full auto</button></td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <fieldset>
+            <legend>Déplacement manuel</legend>
+            <table>
+                <tr>
+                    <th>Robot</th>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>Theta</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Big</td>
+                    <td>
+                        <input style="width: 100px;" name="big-x" id="big-x" type="number"/>
+                    </td>
+                    <td>
+                        <input style="width: 100px;" name="big-y" id="big-y" type="number"/>
+                    </td>
+                    <td>
+                        <input style="width: 100px;" name="big-theta" id="big-theta" type="number"/>
+                    </td>
+                    <td>
+                        <button style="width: 150px;" onclick="moveRobot(
+                            document.getElementById('big-x').value,
+                            document.getElementById('big-y').value,
+                            document.getElementById('big-theta').value
+                        );">
+                            Go
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Small</td>
+                    <td>
+                        <input style="width: 100px;" name="small-x" id="small-x" type="number"/>
+                    </td>
+                    <td>
+                        <input style="width: 100px;" name="small-y" id="small-y" type="number"/>
+                    </td>
+                    <td>
+                        <input style="width: 100px;" name="small-theta" id="small-theta" type="number"/>
+                    </td>
+                    <td>
+                        <button style="width: 150px;" onclick="movePmi(
+                            document.getElementById('small-x').value,
+                            document.getElementById('small-y').value,
+                            document.getElementById('small-theta').value
+                        );">
+                            Go
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <table class="dataBlock">
+        <tr>
+            <th>Exécution Princess</th>
+        </tr>
+        <tr>
+            <td id="data" class="dataFieldset"></td>
+        </tr>
+        <tr>
+            <th>Exécution PMI</th>
+        </tr>
+        <tr>
+            <td id="dataPmi" class="dataFieldset"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
