@@ -1,0 +1,554 @@
+{
+  "tailleX": 2000,
+  "tailleY": 3000,
+  "couleur0": "Jaune",
+  "couleur3000": "Violet",
+  "marge": 190,
+  "zonesInterdites": [
+    {
+      "id": "start0",
+      "forme": "polygone",
+      "desc": "Depart Jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 400,
+          "y": 0
+        },
+        {
+          "x": 400,
+          "y": 400
+        },
+        {
+          "x": 1000,
+          "y": 400
+        },
+        {
+          "x": 1000,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "start3000",
+      "forme": "polygone",
+      "desc": "Depart Violet",
+      "active": true,
+      "points": [
+        {
+          "x": 400,
+          "y": 3000
+        },
+        {
+          "x": 400,
+          "y": 2600
+        },
+        {
+          "x": 1000,
+          "y": 2600
+        },
+        {
+          "x": 1000,
+          "y": 3000
+        }
+      ]
+    },
+    {
+      "id": "yellowDistributor",
+      "forme": "polygone",
+      "desc": "Distributeur jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 1150,
+          "y": 0
+        },
+        {
+          "x": 1150,
+          "y": 130
+        },
+        {
+          "x": 1350,
+          "y": 130
+        },
+        {
+          "x": 1350,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "purpleDistributor",
+      "forme": "polygone",
+      "desc": "Distributeur violet",
+      "active": true,
+      "points": [
+        {
+          "x": 1150,
+          "y": 3000
+        },
+        {
+          "x": 1150,
+          "y": 2870
+        },
+        {
+          "x": 1350,
+          "y": 2870
+        },
+        {
+          "x": 1350,
+          "y": 3000
+        }
+      ]
+    },
+    {
+      "id": "commonYellowDistributor",
+      "forme": "polygone",
+      "desc": "Distributeur commun jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 1275
+        },
+        {
+          "x": 102,
+          "y": 1275
+        },
+        {
+          "x": 102,
+          "y": 1425
+        },
+        {
+          "x": 0,
+          "y": 1425
+        }
+      ]
+    },
+    {
+      "id": "commonPurpleDistributor",
+      "forme": "polygone",
+      "desc": "Distributeur commun violet",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 1575
+        },
+        {
+          "x": 102,
+          "y": 1575
+        },
+        {
+          "x": 102,
+          "y": 1725
+        },
+        {
+          "x": 0,
+          "y": 1725
+        }
+      ]
+    },
+    {
+      "id": "commonDistributorSeparator",
+      "forme": "polygone",
+      "desc": "Séparateur distributeur commun",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 1489
+        },
+        {
+          "x": 300,
+          "y": 1489
+        },
+        {
+          "x": 300,
+          "y": 1511
+        },
+        {
+          "x": 0,
+          "y": 1511
+        }
+      ]
+    },
+    {
+      "id": "yellowSearchZone",
+      "forme": "polygone",
+      "desc": "Site de fouille jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 1200,
+          "y": 800
+        },
+        {
+          "x": 1200,
+          "y": 1150
+        },
+        {
+          "x": 1550,
+          "y": 1150
+        },
+        {
+          "x": 1550,
+          "y": 800
+        }
+      ]
+    },
+    {
+      "id": "purpleSearchZone",
+      "forme": "polygone",
+      "desc": "Site de fouille violet",
+      "active": true,
+      "points": [
+        {
+          "x": 1200,
+          "y": 1850
+        },
+        {
+          "x": 1200,
+          "y": 2200
+        },
+        {
+          "x": 1550,
+          "y": 2200
+        },
+        {
+          "x": 1550,
+          "y": 1850
+        }
+      ]
+    },
+    {
+      "id": "yellowExposition",
+      "forme": "polygone",
+      "desc": "Exposition jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 1170
+        },
+        {
+          "x": 85,
+          "y": 1170
+        },
+        {
+          "x": 85,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "purpleExposition",
+      "forme": "polygone",
+      "desc": "Exposition violet",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 1830
+        },
+        {
+          "x": 0,
+          "y": 3000
+        },
+        {
+          "x": 85,
+          "y": 3000
+        },
+        {
+          "x": 85,
+          "y": 1830
+        }
+      ]
+    },
+    {
+      "id": "yellowWorkingShed",
+      "forme": "polygone",
+      "desc": "Abris de chantier jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 1490,
+          "y": 0
+        },
+        {
+          "x": 2000,
+          "y": 510
+        },
+        {
+          "x": 2000,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "yellowWorkingShed_margin",
+      "forme": "polygone",
+      "desc": "Abris de chantier jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 1310,
+          "y": 0
+        },
+        {
+          "x": 2000,
+          "y": 690
+        },
+        {
+          "x": 2000,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "purpleWorkingShed",
+      "forme": "polygone",
+      "desc": "Abris de chantier violet",
+      "active": true,
+      "points": [
+        {
+          "x": 1490,
+          "y": 3000
+        },
+        {
+          "x": 2000,
+          "y": 2490
+        },
+        {
+          "x": 2000,
+          "y": 3000
+        }
+      ]
+    },
+    {
+      "id": "purpleWorkingShed_margin",
+      "forme": "polygone",
+      "desc": "Abris de chantier violet",
+      "active": true,
+      "points": [
+        {
+          "x": 1310,
+          "y": 3000
+        },
+        {
+          "x": 2000,
+          "y": 2310
+        },
+        {
+          "x": 2000,
+          "y": 3000
+        }
+      ]
+    }
+  ],
+  "elementsJeu": [
+    {
+      "id": "0_SampleBlue",
+      "forme": "cercle",
+      "desc": "Echantillon bleu 0",
+      "active": true,
+      "centre": {
+        "x": 555,
+        "y": 900
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleGreen",
+      "forme": "cercle",
+      "desc": "Echantillon vert 0",
+      "active": true,
+      "centre": {
+        "x": 675,
+        "y": 830
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleRed",
+      "forme": "cercle",
+      "desc": "Echantillon rouge 0",
+      "active": true,
+      "centre": {
+        "x": 795,
+        "y": 900
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleBlue",
+      "forme": "cercle",
+      "desc": "Echantillon bleu 3000",
+      "active": true,
+      "centre": {
+        "x": 555,
+        "y": 2100
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleGreen",
+      "forme": "cercle",
+      "desc": "Echantillon vert 3000",
+      "active": true,
+      "centre": {
+        "x": 675,
+        "y": 2170
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleRed",
+      "forme": "cercle",
+      "desc": "Echantillon rouge 3000",
+      "active": true,
+      "centre": {
+        "x": 795,
+        "y": 2100
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleCentralRed",
+      "forme": "cercle",
+      "desc": "Echantillon central déposé rouge 0",
+      "active": false,
+      "centre": {
+        "x": 960,
+        "y": 80
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleCentralGreen",
+      "forme": "cercle",
+      "desc": "Echantillon central déposé vert 0",
+      "active": false,
+      "centre": {
+        "x": 960,
+        "y": 230
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleCentralBlue",
+      "forme": "cercle",
+      "desc": "Echantillon central déposé bleu 0",
+      "active": false,
+      "centre": {
+        "x": 960,
+        "y": 380
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleCentralRed",
+      "forme": "cercle",
+      "desc": "Echantillon central déposé rouge 3000",
+      "active": false,
+      "centre": {
+        "x": 790,
+        "y": 2920
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleCentralGreen",
+      "forme": "cercle",
+      "desc": "Echantillon central déposé vert 3000",
+      "active": false,
+      "centre": {
+        "x": 790,
+        "y": 2770
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleCentralBlue",
+      "forme": "cercle",
+      "desc": "Echantillon central déposé bleu 3000",
+      "active": false,
+      "centre": {
+        "x": 790,
+        "y": 2620
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleLateralRed",
+      "forme": "cercle",
+      "desc": "Echantillon Lateral déposé rouge 0",
+      "active": false,
+      "centre": {
+        "x": 780,
+        "y": 80
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleLateralGreen",
+      "forme": "cercle",
+      "desc": "Echantillon Lateral déposé vert 0",
+      "active": false,
+      "centre": {
+        "x": 780,
+        "y": 230
+      },
+      "rayon": 75
+    },
+    {
+      "id": "0_SampleLateralBlue",
+      "forme": "cercle",
+      "desc": "Echantillon Lateral déposé bleu 0",
+      "active": false,
+      "centre": {
+        "x": 780,
+        "y": 380
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleLateralRed",
+      "forme": "cercle",
+      "desc": "Echantillon Lateral déposé rouge 3000",
+      "active": false,
+      "centre": {
+        "x": 970,
+        "y": 2920
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleLateralGreen",
+      "forme": "cercle",
+      "desc": "Echantillon Lateral déposé vert 3000",
+      "active": false,
+      "centre": {
+        "x": 970,
+        "y": 2770
+      },
+      "rayon": 75
+    },
+    {
+      "id": "3000_SampleLateralBlue",
+      "forme": "cercle",
+      "desc": "Echantillon Lateral déposé bleu 3000",
+      "active": false,
+      "centre": {
+        "x": 970,
+        "y": 2620
+      },
+      "rayon": 75
+    }
+  ],
+  "detectionIgnoreZone": []
+}
