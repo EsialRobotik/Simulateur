@@ -19,29 +19,41 @@ var moveTime = 600;
 var detected = [];
 var detectedPmi = [];
 
+function init(currentYear) {
+    $.getScript(`../resources/${currentYear}/initBig.json`, function (script) {
+        init2(currentYear, JSON.parse(script));
+    });
+}
+
+function init2(currentYear, startBig) {
+    $.getScript(`../resources/${currentYear}/initSmall.json`, function (script) {
+        initComplete(currentYear, startBig, JSON.parse(script));
+    });
+}
+
 /**
- * Initialisation des robots à animer
- * @var object big : {x, y, theta, regX, regY}
- * @var object small : {x, y, theta, regX, regY}
+ * Robots and table initialization with resources/customization/currentYear.js
  */
-function init(big, small) {
+function initComplete(currentYear, startBig, startSmall) {
+    document.getElementById("table").src = table;
+
     stage = new createjs.Stage("canvas");
 
-    bigPrincess = new createjs.Bitmap('./bigPrincess.png');
+    bigPrincess = new createjs.Bitmap(bigRobot);
     bigPrincess.x = 800;
     bigPrincess.y = 800;
     // Décallage du point d'animation au centre du robot
-    bigPrincess.regX = big.regX;
-    bigPrincess.regY = big.regY;
+    bigPrincess.regX = startBig.regX;
+    bigPrincess.regY = startBig.regY;
     bigPrincess.alpha = 0.7;
     stage.addChild(bigPrincess);
 
-    pmiPrincess = new createjs.Bitmap('./pmiPrincess.png');
+    pmiPrincess = new createjs.Bitmap(smallRobot);
     pmiPrincess.x = 1200;
     pmiPrincess.y = 800;
     // Décallage du point d'animation au centre du robot
-    pmiPrincess.regX = small.regX;
-    pmiPrincess.regY = small.regY;
+    pmiPrincess.regX = startSmall.regX;
+    pmiPrincess.regY = startSmall.regY;
     pmiPrincess.alpha = 0.7;
     stage.addChild(pmiPrincess);
 
@@ -49,7 +61,7 @@ function init(big, small) {
 
     createjs.Ticker.setFPS(60);
     createjs.Ticker.addEventListener("tick", stage);
-    initRobot(big, small);
+    initRobot(startBig, startSmall);
 
     var inputs = document.querySelectorAll('.inputfile');
     Array.prototype.forEach.call(inputs, function (input) {
@@ -664,9 +676,6 @@ function sleep(ms) {
 }
 
 function loadFiles() {
-    //loadTable();
-    //loadSimulatorStrat();
-    //loadSimulatorStratPmi();
     loadStratLog();
     loadStratLogPmi();
     loadTbl();

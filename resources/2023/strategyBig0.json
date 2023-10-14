@@ -1,0 +1,668 @@
+[
+  {
+    "task": "Position de départ",
+    "command": "start",
+    "position": {
+      "x": 2800,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Libération assiette 2",
+    "command": "delete-zone#start0_2",
+    "position": {
+      "x": 2800,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Step de départ bizarre",
+    "command": "go#1",
+    "position": {
+      "x": 2799,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Init pince",
+    "command": "action#2",
+    "position": {
+      "x": 2799,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Init ascenceur",
+    "command": "action#4",
+    "position": {
+      "x": 2799,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Récupération violet 2",
+    "command": "goto#2630;1775",
+    "position": {
+      "x": 2630,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Prise violet 2",
+    "command": "action#11",
+    "position": {
+      "x": 2630,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Libération violet 2",
+    "command": "delete-zone#east_cake_purple_2",
+    "position": {
+      "x": 2630,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Récupération jaune 2",
+    "command": "goto#2430;1775",
+    "position": {
+      "x": 2430,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Prise jaune 2",
+    "command": "action#12",
+    "position": {
+      "x": 2430,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Libération jaune 2",
+    "command": "delete-zone#east_cake_yellow_2",
+    "position": {
+      "x": 2430,
+      "y": 1775,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto-astar#2430;1770",
+    "position": {
+      "x": 2430,
+      "y": 1770,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto-astar#2280;1620",
+    "position": {
+      "x": 2280,
+      "y": 1620,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto-astar#2280;1420",
+    "position": {
+      "x": 2280,
+      "y": 1420,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto-astar#2200;1340",
+    "position": {
+      "x": 2200,
+      "y": 1340,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto-astar#2200;1280",
+    "position": {
+      "x": 2200,
+      "y": 1280,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto#2200;1275",
+    "position": {
+      "x": 2200,
+      "y": 1275,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "face#0;1275",
+    "position": {
+      "x": 2200,
+      "y": 1275,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Récupération brun 2",
+    "command": "goto#2080;1275",
+    "position": {
+      "x": 2080,
+      "y": 1275,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Prise brun 2",
+    "command": "action#12",
+    "position": {
+      "x": 2080,
+      "y": 1275,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Libération brun 2",
+    "command": "delete-zone#east_cake_brown_2",
+    "position": {
+      "x": 2080,
+      "y": 1275,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Récupération brun 1",
+    "command": "goto-astar#2080;1270",
+    "position": {
+      "x": 2080,
+      "y": 1270,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Récupération brun 1",
+    "command": "goto-astar#2070;1280",
+    "position": {
+      "x": 2070,
+      "y": 1280,
+      "theta": 2.356194490192345
+    }
+  },
+  {
+    "task": "Récupération brun 1",
+    "command": "goto-astar#1400;1280",
+    "position": {
+      "x": 1400,
+      "y": 1280,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Libération brun 1",
+    "command": "delete-zone#east_cake_brown_1",
+    "position": {
+      "x": 1400,
+      "y": 1280,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Récupération brun 1",
+    "command": "goto#1100;1280",
+    "position": {
+      "x": 1100,
+      "y": 1280,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 2",
+    "command": "goto-astar#1100;1280",
+    "position": {
+      "x": 1100,
+      "y": 1280,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 2",
+    "command": "goto-astar#930;1450",
+    "position": {
+      "x": 930,
+      "y": 1450,
+      "theta": 2.356194490192345
+    }
+  },
+  {
+    "task": "Go assiette 2",
+    "command": "goto-astar#800;1450",
+    "position": {
+      "x": 800,
+      "y": 1450,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Alignement assiette 2",
+    "command": "face#0;1450",
+    "position": {
+      "x": 800,
+      "y": 1450,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position largage 1",
+    "command": "goto#600;1450",
+    "position": {
+      "x": 600,
+      "y": 1450,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Libération assiette 2",
+    "command": "goto-back#800;1450",
+    "position": {
+      "x": 800,
+      "y": 1450,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 2",
+    "command": "goto-astar#800;1450",
+    "position": {
+      "x": 800,
+      "y": 1450,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 2",
+    "command": "goto-astar#550;1200",
+    "position": {
+      "x": 550,
+      "y": 1200,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Go assiette 2",
+    "command": "goto-astar#500;1200",
+    "position": {
+      "x": 500,
+      "y": 1200,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Alignement assiette 2",
+    "command": "face#0;1200",
+    "position": {
+      "x": 500,
+      "y": 1200,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position largage 1",
+    "command": "goto#250;1200",
+    "position": {
+      "x": 250,
+      "y": 1200,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depilement 1",
+    "command": "action#13",
+    "position": {
+      "x": 250,
+      "y": 1200,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position largage 2",
+    "command": "goto-back#350;1200",
+    "position": {
+      "x": 350,
+      "y": 1200,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Depilement 2",
+    "command": "action#13",
+    "position": {
+      "x": 350,
+      "y": 1200,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Position largage 3",
+    "command": "goto-back#450;1200",
+    "position": {
+      "x": 450,
+      "y": 1200,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Depilement 3",
+    "command": "action#13",
+    "position": {
+      "x": 450,
+      "y": 1200,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Libération assiette 2",
+    "command": "goto-back#650;1200",
+    "position": {
+      "x": 650,
+      "y": 1200,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 3",
+    "command": "goto-astar#650;1200",
+    "position": {
+      "x": 650,
+      "y": 1200,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 3",
+    "command": "goto-astar#1000;1550",
+    "position": {
+      "x": 1000,
+      "y": 1550,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Alignement assiette 3",
+    "command": "face#1000;2000",
+    "position": {
+      "x": 1000,
+      "y": 1550,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Position largage 1",
+    "command": "goto#1000;1750",
+    "position": {
+      "x": 1000,
+      "y": 1750,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Depilement 1",
+    "command": "action#13",
+    "position": {
+      "x": 1000,
+      "y": 1750,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Position largage 2",
+    "command": "goto-back#1000;1650",
+    "position": {
+      "x": 1000,
+      "y": 1650,
+      "theta": -4.71238898038469
+    }
+  },
+  {
+    "task": "Depilement 2",
+    "command": "action#13",
+    "position": {
+      "x": 1000,
+      "y": 1650,
+      "theta": -4.71238898038469
+    }
+  },
+  {
+    "task": "Position largage 3",
+    "command": "goto-back#1000;1550",
+    "position": {
+      "x": 1000,
+      "y": 1550,
+      "theta": -4.71238898038469
+    }
+  },
+  {
+    "task": "Depilement 3",
+    "command": "action#13",
+    "position": {
+      "x": 1000,
+      "y": 1550,
+      "theta": -4.71238898038469
+    }
+  },
+  {
+    "task": "Libération assiette 3",
+    "command": "goto-back#1000;1450",
+    "position": {
+      "x": 1000,
+      "y": 1450,
+      "theta": -4.71238898038469
+    }
+  },
+  {
+    "task": "Go assiette 4",
+    "command": "goto-astar#1000;1450",
+    "position": {
+      "x": 1000,
+      "y": 1450,
+      "theta": -4.71238898038469
+    }
+  },
+  {
+    "task": "Go assiette 4",
+    "command": "goto-astar#1600;850",
+    "position": {
+      "x": 1600,
+      "y": 850,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Go assiette 4",
+    "command": "goto-astar#1600;480",
+    "position": {
+      "x": 1600,
+      "y": 480,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Go assiette 4",
+    "command": "goto-astar#1630;450",
+    "position": {
+      "x": 1630,
+      "y": 450,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Go assiette 4",
+    "command": "goto-astar#1750;450",
+    "position": {
+      "x": 1750,
+      "y": 450,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Alignement assiette 4",
+    "command": "face#1750;0",
+    "position": {
+      "x": 1750,
+      "y": 450,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Position largage 1",
+    "command": "goto#1750;250",
+    "position": {
+      "x": 1750,
+      "y": 250,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Depilement 1",
+    "command": "action#13",
+    "position": {
+      "x": 1750,
+      "y": 250,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Position largage 2",
+    "command": "goto-back#1750;350",
+    "position": {
+      "x": 1750,
+      "y": 350,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Depilement 2",
+    "command": "action#13",
+    "position": {
+      "x": 1750,
+      "y": 350,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Position largage 3",
+    "command": "goto-back#1750;450",
+    "position": {
+      "x": 1750,
+      "y": 450,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Depilement 3",
+    "command": "action#13",
+    "position": {
+      "x": 1750,
+      "y": 450,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Libération assiette 4",
+    "command": "goto-back#1750;600",
+    "position": {
+      "x": 1750,
+      "y": 600,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Libération assiette 4",
+    "command": "goto#1600;600",
+    "position": {
+      "x": 1600,
+      "y": 600,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#1600;600",
+    "position": {
+      "x": 1600,
+      "y": 600,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#1610;610",
+    "position": {
+      "x": 1610,
+      "y": 610,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#1610;1110",
+    "position": {
+      "x": 1610,
+      "y": 1110,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#1880;1380",
+    "position": {
+      "x": 1880,
+      "y": 1380,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#2460;1380",
+    "position": {
+      "x": 2460,
+      "y": 1380,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#2500;1420",
+    "position": {
+      "x": 2500,
+      "y": 1420,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Go assiette 1",
+    "command": "goto-astar#2500;1500",
+    "position": {
+      "x": 2500,
+      "y": 1500,
+      "theta": 1.5707963267948966
+    }
+  }
+]
