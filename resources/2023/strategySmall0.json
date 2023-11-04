@@ -1,0 +1,623 @@
+[
+  {
+    "task": "Position de départ",
+    "command": "start",
+    "position": {
+      "x": 220,
+      "y": 1300,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Libération assiette 2",
+    "command": "delete-zone#start0_2",
+    "position": {
+      "x": 220,
+      "y": 1300,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Step de départ bizarre",
+    "command": "go#1",
+    "position": {
+      "x": 221,
+      "y": 1300,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#450;1180",
+    "position": {
+      "x": 450,
+      "y": 1180,
+      "theta": -0.4826764537744962
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "face#0;1180",
+    "position": {
+      "x": 450,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#350;1180",
+    "position": {
+      "x": 350,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Reduction de vitesse",
+    "command": "speed#25",
+    "position": {
+      "x": 350,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#320;1180",
+    "position": {
+      "x": 320,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 320,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#290;1180",
+    "position": {
+      "x": 290,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 290,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#260;1180",
+    "position": {
+      "x": 260,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 260,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#230;1180",
+    "position": {
+      "x": 230,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 230,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#200;1180",
+    "position": {
+      "x": 200,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 200,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#170;1180",
+    "position": {
+      "x": 170,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 170,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#140;1180",
+    "position": {
+      "x": 140,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 140,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#110;1180",
+    "position": {
+      "x": 110,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 110,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#80;1180",
+    "position": {
+      "x": 80,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 80,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Vitesse normale",
+    "command": "speed#100",
+    "position": {
+      "x": 80,
+      "y": 1180,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Sortie aspiration",
+    "command": "goto-back#450;1180",
+    "position": {
+      "x": 450,
+      "y": 1180,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto-astar#450;1180",
+    "position": {
+      "x": 450,
+      "y": 1180,
+      "theta": -3.141592653589793
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto-astar#780;1510",
+    "position": {
+      "x": 780,
+      "y": 1510,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto-astar#1000;1510",
+    "position": {
+      "x": 1000,
+      "y": 1510,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto-astar#1100;1610",
+    "position": {
+      "x": 1100,
+      "y": 1610,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto-astar#1100;1800",
+    "position": {
+      "x": 1100,
+      "y": 1800,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1200;1805",
+    "position": {
+      "x": 1200,
+      "y": 1805,
+      "theta": 0.049958395721942765
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "face#3000;1805",
+    "position": {
+      "x": 1200,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1300;1805",
+    "position": {
+      "x": 1300,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Reduction de vitesse",
+    "command": "speed#25",
+    "position": {
+      "x": 1300,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1330;1805",
+    "position": {
+      "x": 1330,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1330,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1360;1805",
+    "position": {
+      "x": 1360,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1360,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1390;1805",
+    "position": {
+      "x": 1390,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1390,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1420;1805",
+    "position": {
+      "x": 1420,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1420,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1450;1805",
+    "position": {
+      "x": 1450,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1450,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1480;1805",
+    "position": {
+      "x": 1480,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1480,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1510;1805",
+    "position": {
+      "x": 1510,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1510,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1540;1805",
+    "position": {
+      "x": 1540,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1540,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position aspiration",
+    "command": "goto#1570;1805",
+    "position": {
+      "x": 1570,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "On laisse le temps",
+    "command": "wait#0",
+    "position": {
+      "x": 1570,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Vitesse normale",
+    "command": "speed#100",
+    "position": {
+      "x": 1570,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Sortie aspiration",
+    "command": "goto-back#1200;1805",
+    "position": {
+      "x": 1200,
+      "y": 1805,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Sortie aspiration",
+    "command": "goto#1100;1800",
+    "position": {
+      "x": 1100,
+      "y": 1800,
+      "theta": 3.191551049311736
+    }
+  },
+  {
+    "task": "Libération violet 2",
+    "command": "delete-zone#east_cake_purple_2",
+    "position": {
+      "x": 1100,
+      "y": 1800,
+      "theta": 3.191551049311736
+    }
+  },
+  {
+    "task": "Libération jaune 2",
+    "command": "delete-zone#east_cake_yellow_2",
+    "position": {
+      "x": 1100,
+      "y": 1800,
+      "theta": 3.191551049311736
+    }
+  },
+  {
+    "task": "Libération brun 2",
+    "command": "delete-zone#east_cake_brown_2",
+    "position": {
+      "x": 1100,
+      "y": 1800,
+      "theta": 3.191551049311736
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#1100;1800",
+    "position": {
+      "x": 1100,
+      "y": 1800,
+      "theta": 3.191551049311736
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#1130;1770",
+    "position": {
+      "x": 1130,
+      "y": 1770,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#1200;1770",
+    "position": {
+      "x": 1200,
+      "y": 1770,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#1590;1380",
+    "position": {
+      "x": 1590,
+      "y": 1380,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#2720;1380",
+    "position": {
+      "x": 2720,
+      "y": 1380,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#2800;1460",
+    "position": {
+      "x": 2800,
+      "y": 1460,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Position vidage bouboule",
+    "command": "goto-astar#2800;1770",
+    "position": {
+      "x": 2800,
+      "y": 1770,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Alignement vidage bouboule",
+    "command": "face#3000;1775",
+    "position": {
+      "x": 2800,
+      "y": 1770,
+      "theta": 0.02499479361892016
+    }
+  },
+  {
+    "task": "Position finale",
+    "command": "go#100",
+    "position": {
+      "x": 2899,
+      "y": 1772,
+      "theta": 0.02499479361892016
+    }
+  }
+]

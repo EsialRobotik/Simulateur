@@ -1,0 +1,389 @@
+[
+  {
+    "task": "Position de départ",
+    "command": "start",
+    "position": {
+      "x": 600,
+      "y": 200,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Step de départ bizarre",
+    "command": "go#1",
+    "position": {
+      "x": 600,
+      "y": 201,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Sortie de zone interdite",
+    "command": "goto#600;250",
+    "position": {
+      "x": 600,
+      "y": 250,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto-astar#600;250",
+    "position": {
+      "x": 600,
+      "y": 250,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto-astar#750;400",
+    "position": {
+      "x": 750,
+      "y": 400,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto-astar#1500;400",
+    "position": {
+      "x": 1500,
+      "y": 400,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto#1560;350",
+    "position": {
+      "x": 1560,
+      "y": 350,
+      "theta": -0.6947382761967033
+    }
+  },
+  {
+    "task": "Alignement récupération statuette",
+    "command": "face#1650;260",
+    "position": {
+      "x": 1560,
+      "y": 350,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Prise statuette",
+    "command": "action#48",
+    "position": {
+      "x": 1560,
+      "y": 350,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Sortie chantier",
+    "command": "go#-100",
+    "position": {
+      "x": 1490,
+      "y": 420,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#1490;420",
+    "position": {
+      "x": 1490,
+      "y": 420,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#1410;340",
+    "position": {
+      "x": 1410,
+      "y": 340,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#670;340",
+    "position": {
+      "x": 670,
+      "y": 340,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#590;260",
+    "position": {
+      "x": 590,
+      "y": 260,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#400;260",
+    "position": {
+      "x": 400,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On remonte le bras",
+    "command": "action#57",
+    "position": {
+      "x": 400,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto#200;260",
+    "position": {
+      "x": 200,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "face#0;260",
+    "position": {
+      "x": 200,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On place le bras",
+    "command": "action#58",
+    "position": {
+      "x": 200,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On ralentit",
+    "command": "speed#20",
+    "position": {
+      "x": 200,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement final exposition",
+    "command": "goto#155;260",
+    "position": {
+      "x": 155,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Pose statuette",
+    "command": "action#50",
+    "position": {
+      "x": 155,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On remet bien",
+    "command": "speed#100",
+    "position": {
+      "x": 155,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Sortie exposition",
+    "command": "go#-200",
+    "position": {
+      "x": 355,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On range le bras",
+    "command": "action#25",
+    "position": {
+      "x": 355,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "On range le bras",
+    "command": "action#17",
+    "position": {
+      "x": 355,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Placement chantier dépose fake",
+    "command": "goto-astar#350;260",
+    "position": {
+      "x": 350,
+      "y": 260,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Placement chantier dépose fake",
+    "command": "goto-astar#490;400",
+    "position": {
+      "x": 490,
+      "y": 400,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Placement chantier dépose fake",
+    "command": "goto-astar#1500;400",
+    "position": {
+      "x": 1500,
+      "y": 400,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Placement chantier dépose fake",
+    "command": "goto#1580;330",
+    "position": {
+      "x": 1580,
+      "y": 330,
+      "theta": -0.7188299996216245
+    }
+  },
+  {
+    "task": "Alignement dépose fake",
+    "command": "face#1670;240",
+    "position": {
+      "x": 1580,
+      "y": 330,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Dépose fake",
+    "command": "action#53",
+    "position": {
+      "x": 1580,
+      "y": 330,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Sortie chantier",
+    "command": "go#-100",
+    "position": {
+      "x": 1510,
+      "y": 400,
+      "theta": -0.7853981633974483
+    }
+  },
+  {
+    "task": "Placement Carré 1",
+    "command": "goto#1760;600",
+    "position": {
+      "x": 1760,
+      "y": 600,
+      "theta": 0.6747409422235527
+    }
+  },
+  {
+    "task": "Placement Carré 1",
+    "command": "goto#1760;1000",
+    "position": {
+      "x": 1760,
+      "y": 1000,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Placement Carré 1",
+    "command": "goto-back#1800;640",
+    "position": {
+      "x": 1800,
+      "y": 640,
+      "theta": -4.601731759210794
+    }
+  },
+  {
+    "task": "Alignement Carré 1",
+    "command": "face#1800;3000",
+    "position": {
+      "x": 1800,
+      "y": 640,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Placement Carré 2",
+    "command": "goto#1800;820",
+    "position": {
+      "x": 1800,
+      "y": 820,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Alignement Carré 2",
+    "command": "face#1800;3000",
+    "position": {
+      "x": 1800,
+      "y": 820,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Carré 2",
+    "command": "action#21",
+    "position": {
+      "x": 1800,
+      "y": 820,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Carré 2",
+    "command": "action#22",
+    "position": {
+      "x": 1800,
+      "y": 820,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Sortie Carré 2",
+    "command": "goto#1760;1000",
+    "position": {
+      "x": 1760,
+      "y": 1000,
+      "theta": 1.7894652726688385
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto#1500;950",
+    "position": {
+      "x": 1500,
+      "y": 950,
+      "theta": 3.3315809415085087
+    }
+  }
+]

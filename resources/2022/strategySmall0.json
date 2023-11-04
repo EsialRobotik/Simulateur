@@ -1,0 +1,722 @@
+[
+  {
+    "task": "Position de départ",
+    "command": "start",
+    "position": {
+      "x": 900,
+      "y": 240,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Step de départ bizarre",
+    "command": "go#1",
+    "position": {
+      "x": 901,
+      "y": 240,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto-astar#900;240",
+    "position": {
+      "x": 900,
+      "y": 240,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto-astar#1160;500",
+    "position": {
+      "x": 1160,
+      "y": 500,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto-astar#1600;500",
+    "position": {
+      "x": 1600,
+      "y": 500,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Placement chantier récupération statuette",
+    "command": "goto#1720;420",
+    "position": {
+      "x": 1720,
+      "y": 420,
+      "theta": -0.5880026035475675
+    }
+  },
+  {
+    "task": "Alignement récupération statuette",
+    "command": "face#1800;342",
+    "position": {
+      "x": 1720,
+      "y": 420,
+      "theta": -0.7727406115633964
+    }
+  },
+  {
+    "task": "Récupération statuette",
+    "command": "action#9",
+    "position": {
+      "x": 1720,
+      "y": 420,
+      "theta": -0.7727406115633964
+    }
+  },
+  {
+    "task": "Manoeuvre libération réplique",
+    "command": "go#-300",
+    "position": {
+      "x": 1506,
+      "y": 629,
+      "theta": -0.7727406115633964
+    }
+  },
+  {
+    "task": "Placement chantier libération réplique",
+    "command": "goto#1500;450",
+    "position": {
+      "x": 1500,
+      "y": 450,
+      "theta": 4.6788819726038255
+    }
+  },
+  {
+    "task": "Placement chantier libération réplique",
+    "command": "goto#1640;280",
+    "position": {
+      "x": 1640,
+      "y": 280,
+      "theta": -0.8818719385800352
+    }
+  },
+  {
+    "task": "Alignement libération réplique",
+    "command": "face#1930;0",
+    "position": {
+      "x": 1640,
+      "y": 280,
+      "theta": -0.7678561033400458
+    }
+  },
+  {
+    "task": "Placement final libération réplique",
+    "command": "go#40",
+    "position": {
+      "x": 1668,
+      "y": 253,
+      "theta": -0.7678561033400458
+    }
+  },
+  {
+    "task": "Libération réplique",
+    "command": "action#10",
+    "position": {
+      "x": 1668,
+      "y": 253,
+      "theta": -0.7678561033400458
+    }
+  },
+  {
+    "task": "Libération chantier",
+    "command": "go#-200",
+    "position": {
+      "x": 1525,
+      "y": 391,
+      "theta": -0.7678561033400458
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#1520;390",
+    "position": {
+      "x": 1520,
+      "y": 390,
+      "theta": 3.338988213439674
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#1750;620",
+    "position": {
+      "x": 1750,
+      "y": 620,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#1750;1340",
+    "position": {
+      "x": 1750,
+      "y": 1340,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto#1000;1340",
+    "position": {
+      "x": 1000,
+      "y": 1340,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#1000;1340",
+    "position": {
+      "x": 1000,
+      "y": 1340,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#810;1150",
+    "position": {
+      "x": 810,
+      "y": 1150,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#420;1150",
+    "position": {
+      "x": 420,
+      "y": 1150,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#270;1000",
+    "position": {
+      "x": 270,
+      "y": 1000,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Déplacement exposition",
+    "command": "goto-astar#270;310",
+    "position": {
+      "x": 270,
+      "y": 310,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Placement exposition",
+    "command": "goto#90;315",
+    "position": {
+      "x": 90,
+      "y": 315,
+      "theta": 3.113822016996372
+    }
+  },
+  {
+    "task": "Alignement exposition",
+    "command": "face#0;315",
+    "position": {
+      "x": 90,
+      "y": 315,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Dépose statuette",
+    "command": "action#30",
+    "position": {
+      "x": 90,
+      "y": 315,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Collage statuette",
+    "command": "go#10",
+    "position": {
+      "x": 80,
+      "y": 315,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Dépose statuette",
+    "command": "action#15",
+    "position": {
+      "x": 80,
+      "y": 315,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Sortie exposition",
+    "command": "go#-190",
+    "position": {
+      "x": 270,
+      "y": 315,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position echantillon bleu",
+    "command": "goto-astar#270;310",
+    "position": {
+      "x": 270,
+      "y": 310,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Position echantillon bleu",
+    "command": "goto-astar#300;340",
+    "position": {
+      "x": 300,
+      "y": 340,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Position echantillon bleu",
+    "command": "goto-astar#300;840",
+    "position": {
+      "x": 300,
+      "y": 840,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Position echantillon bleu",
+    "command": "goto#400;840",
+    "position": {
+      "x": 400,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Récupération bleu",
+    "command": "action#11",
+    "position": {
+      "x": 400,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Stockage bleu",
+    "command": "action#12",
+    "position": {
+      "x": 400,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Suppression zone bleu",
+    "command": "delete-zone#0_SampleBlue",
+    "position": {
+      "x": 400,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position echantillon vert",
+    "command": "goto#400;770",
+    "position": {
+      "x": 400,
+      "y": 770,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Position echantillon vert",
+    "command": "goto#520;770",
+    "position": {
+      "x": 520,
+      "y": 770,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Récupération vert",
+    "command": "action#11",
+    "position": {
+      "x": 520,
+      "y": 770,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Switch vert",
+    "command": "action#14",
+    "position": {
+      "x": 520,
+      "y": 770,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Suppression zone vert",
+    "command": "delete-zone#0_SampleGreen",
+    "position": {
+      "x": 520,
+      "y": 770,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position echantillon rouge",
+    "command": "goto#520;840",
+    "position": {
+      "x": 520,
+      "y": 840,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Position echantillon rouge",
+    "command": "goto#640;840",
+    "position": {
+      "x": 640,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Récupération rouge",
+    "command": "action#11",
+    "position": {
+      "x": 640,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Suppression zone rouge",
+    "command": "delete-zone#0_SampleRed",
+    "position": {
+      "x": 640,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position dépose vert",
+    "command": "goto-astar#640;840",
+    "position": {
+      "x": 640,
+      "y": 840,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Position dépose vert",
+    "command": "goto-astar#510;710",
+    "position": {
+      "x": 510,
+      "y": 710,
+      "theta": 3.9269908169872414
+    }
+  },
+  {
+    "task": "Position dépose vert",
+    "command": "goto-astar#300;710",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position dépose vert",
+    "command": "face#0;710",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depose vert",
+    "command": "action#30",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Mise en place dépose vert",
+    "command": "go#100",
+    "position": {
+      "x": 200,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Lacher vert",
+    "command": "action#15",
+    "position": {
+      "x": 200,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Sortie dépose vert",
+    "command": "go#-100",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depose vert",
+    "command": "action#31",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Switch pour rouge",
+    "command": "action#14",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position dépose Rouge",
+    "command": "goto-astar#300;710",
+    "position": {
+      "x": 300,
+      "y": 710,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position dépose Rouge",
+    "command": "goto-astar#300;950",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Position dépose Rouge",
+    "command": "face#0;950",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depose Rouge",
+    "command": "action#30",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Mise en place dépose Rouge",
+    "command": "go#100",
+    "position": {
+      "x": 200,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Lacher Rouge",
+    "command": "action#15",
+    "position": {
+      "x": 200,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Sortie dépose Rouge",
+    "command": "go#-100",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depose Rouge",
+    "command": "action#31",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Switch pour bleu",
+    "command": "action#13",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Switch pour bleu",
+    "command": "action#14",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position dépose Bleu",
+    "command": "goto-astar#300;950",
+    "position": {
+      "x": 300,
+      "y": 950,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Position dépose Bleu",
+    "command": "goto-astar#300;470",
+    "position": {
+      "x": 300,
+      "y": 470,
+      "theta": -1.5707963267948966
+    }
+  },
+  {
+    "task": "Position dépose Bleu",
+    "command": "face#0;470",
+    "position": {
+      "x": 300,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depose Bleu",
+    "command": "action#35",
+    "position": {
+      "x": 300,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Mise en place dépose Bleu",
+    "command": "go#100",
+    "position": {
+      "x": 200,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Lacher Bleu",
+    "command": "action#15",
+    "position": {
+      "x": 200,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Sortie dépose Bleu",
+    "command": "go#-100",
+    "position": {
+      "x": 300,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Depose Bleu",
+    "command": "action#36",
+    "position": {
+      "x": 300,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto-astar#300;470",
+    "position": {
+      "x": 300,
+      "y": 470,
+      "theta": 3.141592653589793
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto-astar#1020;1190",
+    "position": {
+      "x": 1020,
+      "y": 1190,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto-astar#1020;1290",
+    "position": {
+      "x": 1020,
+      "y": 1290,
+      "theta": 1.5707963267948966
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto-astar#1080;1350",
+    "position": {
+      "x": 1080,
+      "y": 1350,
+      "theta": 0.7853981633974483
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto-astar#1150;1350",
+    "position": {
+      "x": 1150,
+      "y": 1350,
+      "theta": 0.0
+    }
+  },
+  {
+    "task": "Mise en place rangement zone de fouille",
+    "command": "goto#1150;1000",
+    "position": {
+      "x": 1150,
+      "y": 1000,
+      "theta": -1.5707963267948966
+    }
+  }
+]
