@@ -13,7 +13,8 @@ all the table
 
 ### Customize your robot
 By default, you will see the EsialRobotik robots representation. You can
-override them in resources/customization by providing your own png files.
+override them in javascript/currentYear.js by providing your own png files.
+You can also switch year and table orientation
 
 ## Dependencies
 This tools use EsaeJs to manipulate a canvas and TweenJs to perform the 
