@@ -19,8 +19,3 @@ You can also switch year and table orientation
 ## Dependencies
 This tools use EsaeJs to manipulate a canvas and TweenJs to perform the 
 animations. Both are documented here : https://createjs.com.
-
-
-## Copyright
-- Mettre une vrai license
-- Mentionner createJs / tweenJs
