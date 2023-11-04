@@ -19,7 +19,18 @@ var moveTime = 600;
 var detected = [];
 var detectedPmi = [];
 
-function init(currentYear) {
+function init(currentYear, rotateTable) {
+    var head  = document.getElementsByTagName('head')[0];
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = rotateTable ? '../css/visualisatorRotated.css' : '../css/visualisator.css';
+    link.media = 'all';
+    head.appendChild(link);
+    var canvas = document.getElementById("canvas");
+    canvas.width = rotateTable ? 2000 : 3000;
+    canvas.height = rotateTable ? 3000 : 2000;
+
     $.getScript(`../resources/${currentYear}/initBig.json`, function (script) {
         init2(currentYear, JSON.parse(script));
     });
