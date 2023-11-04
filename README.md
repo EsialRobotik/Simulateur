@@ -49,5 +49,5 @@ You can use anything for the command, the only key word are `delete-zone#zone-id
 ### table.json
 This is a json description of the forbidden zone of the table. There is two type of
 zone :
-- zonesInterdites : Static forbidden zone, like table border
-- elementsJeu : Dynamic forbidden zone, addable and removale, like a play element
+- forbiddenZones : Static forbidden zone, like table border
+- dynamicZones : Dynamic forbidden zone, addable and removale, like a play element

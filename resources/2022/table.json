@@ -1,10 +1,10 @@
 {
-  "tailleX": 2000,
-  "tailleY": 3000,
-  "couleur0": "Jaune",
-  "couleur3000": "Violet",
+  "sizeX": 2000,
+  "sizeY": 3000,
+  "color0": "Jaune",
+  "color3000": "Violet",
   "marge": 190,
-  "zonesInterdites": [
+  "forbiddenZones": [
     {
       "id": "start0",
       "forme": "polygone",
@@ -350,7 +350,7 @@
       ]
     }
   ],
-  "elementsJeu": [
+  "dynamicZones": [
     {
       "id": "0_SampleBlue",
       "forme": "cercle",

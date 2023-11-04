@@ -51,8 +51,8 @@ function initComplete(currentYear, startBig, startSmall) {
     stage = new createjs.Stage("canvas");
 
     bigPrincess = new createjs.Bitmap(bigRobot);
-    bigPrincess.x = 800;
-    bigPrincess.y = 800;
+    bigPrincess.x = startBig.x;
+    bigPrincess.y = startBig.y;
     // Décallage du point d'animation au centre du robot
     bigPrincess.regX = startBig.regX;
     bigPrincess.regY = startBig.regY;
@@ -60,8 +60,8 @@ function initComplete(currentYear, startBig, startSmall) {
     stage.addChild(bigPrincess);
 
     pmiPrincess = new createjs.Bitmap(smallRobot);
-    pmiPrincess.x = 1200;
-    pmiPrincess.y = 800;
+    pmiPrincess.x = startSmall.x;
+    pmiPrincess.y = startSmall.y;
     // Décallage du point d'animation au centre du robot
     pmiPrincess.regX = startSmall.regX;
     pmiPrincess.regY = startSmall.regY;
@@ -195,7 +195,7 @@ function loadTable(jsonTable, flip = false) {
     margin = jsonTable.marge;
 
     // Zones interdites fixes
-    jsonTable.zonesInterdites.forEach(zone => {
+    jsonTable.forbiddenZones.forEach(zone => {
         displayZone(zone, jsonTable, 'rgba(255,0,0,0.6)', 'rgba(200,0,0,0.4)');
     });
 
@@ -228,7 +228,7 @@ function loadTable(jsonTable, flip = false) {
     stage.addChild(shape);
 
     // Zones interdites mobiles
-    jsonTable.elementsJeu.forEach(zone => {
+    jsonTable.dynamicZones.forEach(zone => {
         displayZone(zone, jsonTable, 'rgba(255,255,0,0.6)', 'rgba(255,165,0,0.4)');
     });
     stage.update();
