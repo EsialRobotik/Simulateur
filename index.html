@@ -29,15 +29,15 @@
         <fieldset>
             <legend>Configuration</legend>
             <div>
-                <button onclick="$.getScript(`../resources/${currentYear}/table.json`, function (script) {loadTable(JSON.parse(script), true); })">Table</button>
+                <button onclick="$.getScript(`../resources/${currentYear}/table.json`, function (script) {loadTable(JSON.parse(script), rotateTable); })">Table</button>
             </div>
             <div>
-                <button onclick="$.getScript(`../resources/${currentYear}/strategyBig0.json`, function (script) {loadSimulatorStrat(JSON.parse(script), true); })">Strat Big 0</button>
-                <button onclick="$.getScript(`../resources/${currentYear}/strategyBig3000.json`, function (script) {loadSimulatorStrat(JSON.parse(script), true); })">Strat Big 2000</button>
+                <button onclick="$.getScript(`../resources/${currentYear}/strategyBig0.json`, function (script) {loadSimulatorStrat(JSON.parse(script)); })">Strat Big 0</button>
+                <button onclick="$.getScript(`../resources/${currentYear}/strategyBig3000.json`, function (script) {loadSimulatorStrat(JSON.parse(script)); })">Strat Big 2000</button>
             </div>
             <div>
-                <button onclick="$.getScript(`../resources/${currentYear}/strategySmall0.json`, function (script) {loadSimulatorStratPmi(JSON.parse(script), true); })">Strat Small 0</button>
-                <button onclick="$.getScript(`../resources/${currentYear}/strategySmall3000.json`, function (script) {loadSimulatorStratPmi(JSON.parse(script), true); })">Strat Small 2000</button>
+                <button onclick="$.getScript(`../resources/${currentYear}/strategySmall0.json`, function (script) {loadSimulatorStratPmi(JSON.parse(script)); })">Strat Small 0</button>
+                <button onclick="$.getScript(`../resources/${currentYear}/strategySmall3000.json`, function (script) {loadSimulatorStratPmi(JSON.parse(script)); })">Strat Small 2000</button>
             </div>
         </fieldset>
     </div>
