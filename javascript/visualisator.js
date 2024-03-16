@@ -37,9 +37,13 @@ function init(currentYear, rotateTable) {
 }
 
 function init2(currentYear, startBig) {
-    $.getScript(`../resources/${currentYear}/initSmall.json`, function (script) {
-        initComplete(currentYear, startBig, JSON.parse(script));
-    });
+    if (smallRobot !== null) {
+        $.getScript(`../resources/${currentYear}/initSmall.json`, function (script) {
+            initComplete(currentYear, startBig, JSON.parse(script));
+        });
+    } else {
+        initComplete(currentYear, startBig, null);
+    }
 }
 
 /**
@@ -59,14 +63,16 @@ function initComplete(currentYear, startBig, startSmall) {
     bigPrincess.alpha = 0.7;
     stage.addChild(bigPrincess);
 
-    pmiPrincess = new createjs.Bitmap(smallRobot);
-    pmiPrincess.x = startSmall.x;
-    pmiPrincess.y = startSmall.y;
-    // Décallage du point d'animation au centre du robot
-    pmiPrincess.regX = startSmall.regX;
-    pmiPrincess.regY = startSmall.regY;
-    pmiPrincess.alpha = 0.7;
-    stage.addChild(pmiPrincess);
+    if (smallRobot !== null) {
+        pmiPrincess = new createjs.Bitmap(smallRobot);
+        pmiPrincess.x = startSmall.x;
+        pmiPrincess.y = startSmall.y;
+        // Décallage du point d'animation au centre du robot
+        pmiPrincess.regX = startSmall.regX;
+        pmiPrincess.regY = startSmall.regY;
+        pmiPrincess.alpha = 0.7;
+        stage.addChild(pmiPrincess);
+    }
 
     stage.update();
 
@@ -97,16 +103,18 @@ function initComplete(currentYear, startBig, startSmall) {
 /**
  * Mise en position de départ des robots
  * @var object big : {x, y, theta, regX, regY}
- * @var object small : {x, y, theta, regX, regY}
+ * @var object|null small : {x, y, theta, regX, regY}
  */
 function initRobot(big, small) {
     createjs.Tween.get(bigPrincess)
         .to({rotation: radiansToDegrees(big.theta)}, rotationTime, createjs.Ease.getPowInOut(4))
         .to({x: big.x, y: big.y}, moveTime, createjs.Ease.getPowInOut(4));
 
-    createjs.Tween.get(pmiPrincess)
-        .to({rotation: radiansToDegrees(small.theta)}, rotationTime, createjs.Ease.getPowInOut(4))
-        .to({x: small.x, y: small.y}, moveTime, createjs.Ease.getPowInOut(4));
+    if (smallRobot !== null) {
+        createjs.Tween.get(pmiPrincess)
+            .to({rotation: radiansToDegrees(small.theta)}, rotationTime, createjs.Ease.getPowInOut(4))
+            .to({x: small.x, y: small.y}, moveTime, createjs.Ease.getPowInOut(4));
+    }
 }
 
 /**
@@ -411,7 +419,7 @@ function loadSimulatorStratPmi(strategy) {
 }
 
 /**
- * Chargement des logs d'un match du robot principal
+ * Chargement des logs d'un match du robot secondaire
  * @returns {boolean}
  */
 function loadStratLog() {
