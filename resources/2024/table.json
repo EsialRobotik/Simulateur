@@ -3,8 +3,221 @@
   "sizeY": 3000,
   "color0": "Bleu",
   "color3000": "Jaune",
-  "marge": 190,
-  "forbiddenZones": [],
-  "dynamicZones": [],
+  "marge": 180,
+  "forbiddenZones": [
+    {
+      "id": "start0_1",
+      "forme": "polygone",
+      "desc": "Depart Bleu 1",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 450
+        },
+        {
+          "x": 450,
+          "y": 450
+        },
+        {
+          "x": 450,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "start0_2",
+      "forme": "polygone",
+      "desc": "Depart Bleu 2",
+      "active": true,
+      "points": [
+        {
+          "x": 1550,
+          "y": 0
+        },
+        {
+          "x": 1550,
+          "y": 450
+        },
+        {
+          "x": 2000,
+          "y": 450
+        },
+        {
+          "x": 2000,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "start0_3",
+      "forme": "polygone",
+      "desc": "Depart Bleu 3",
+      "active": true,
+      "points": [
+        {
+          "x": 775,
+          "y": 2550
+        },
+        {
+          "x": 775,
+          "y": 3000
+        },
+        {
+          "x": 1225,
+          "y": 3000
+        },
+        {
+          "x": 1225,
+          "y": 2550
+        }
+      ]
+    },
+
+    {
+      "id": "start30000_1",
+      "forme": "polygone",
+      "desc": "Depart Jaune 1",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 2550
+        },
+        {
+          "x": 0,
+          "y": 3000
+        },
+        {
+          "x": 450,
+          "y": 3000
+        },
+        {
+          "x": 450,
+          "y": 2550
+        }
+      ]
+    },
+    {
+      "id": "start3000_2",
+      "forme": "polygone",
+      "desc": "Depart Jaune 2",
+      "active": true,
+      "points": [
+        {
+          "x": 1550,
+          "y": 2550
+        },
+        {
+          "x": 1550,
+          "y": 3000
+        },
+        {
+          "x": 2000,
+          "y": 3000
+        },
+        {
+          "x": 1550,
+          "y": 2550
+        }
+      ]
+    },
+    {
+      "id": "start0_3",
+      "forme": "polygone",
+      "desc": "Depart Bleu 3",
+      "active": true,
+      "points": [
+        {
+          "x": 775,
+          "y": 0
+        },
+        {
+          "x": 775,
+          "y": 450
+        },
+        {
+          "x": 1225,
+          "y": 450
+        },
+        {
+          "x": 1225,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "dynamicZones": [
+    {
+      "id": "Plants_N",
+      "forme": "cercle",
+      "desc": "Plantes Nord",
+      "active": true,
+      "centre": {
+        "x": 500,
+        "y": 1500
+      },
+      "rayon": 125
+    },
+    {
+      "id": "Plants_NW",
+      "forme": "cercle",
+      "desc": "Plantes Nord Ouest",
+      "active": true,
+      "centre": {
+        "x": 700,
+        "y": 1000
+      },
+      "rayon": 125
+    },
+    {
+      "id": "Plants_NE",
+      "forme": "cercle",
+      "desc": "Plantes Nord Est",
+      "active": true,
+      "centre": {
+        "x": 700,
+        "y": 2000
+      },
+      "rayon": 125
+    },
+    {
+      "id": "Plants_S",
+      "forme": "cercle",
+      "desc": "Plantes Sud",
+      "active": true,
+      "centre": {
+        "x": 1500,
+        "y": 1500
+      },
+      "rayon": 125
+    },
+    {
+      "id": "Plants_SW",
+      "forme": "cercle",
+      "desc": "Plantes Sud Ouest",
+      "active": true,
+      "centre": {
+        "x": 1300,
+        "y": 1000
+      },
+      "rayon": 125
+    },
+    {
+      "id": "Plants_SE",
+      "forme": "cercle",
+      "desc": "Plantes Sud Est",
+      "active": true,
+      "centre": {
+        "x": 1300,
+        "y": 2000
+      },
+      "rayon": 125
+    }
+  ],
   "detectionIgnoreZone": []
 }
