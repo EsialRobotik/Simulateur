@@ -1,0 +1,10 @@
+{
+  "sizeX": 2000,
+  "sizeY": 3000,
+  "color0": "Bleu",
+  "color3000": "Jaune",
+  "marge": 190,
+  "forbiddenZones": [],
+  "dynamicZones": [],
+  "detectionIgnoreZone": []
+}
