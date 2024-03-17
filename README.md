@@ -50,4 +50,4 @@ You can use anything for the command, the only key word are `delete-zone#zone-id
 This is a json description of the forbidden zone of the table. There is two type of
 zone :
 - forbiddenZones : Static forbidden zone, like table border
-- dynamicZones : Dynamic forbidden zone, addable and removale, like a play element
+- dynamicZones : Dynamic forbidden zone, addable and removable, like a play element
