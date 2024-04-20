@@ -79,7 +79,7 @@
     },
 
     {
-      "id": "start30000_1",
+      "id": "start3000_1",
       "forme": "polygone",
       "desc": "Depart Jaune 1",
       "active": true,
@@ -127,9 +127,9 @@
       ]
     },
     {
-      "id": "start0_3",
+      "id": "start3000_3",
       "forme": "polygone",
-      "desc": "Depart Bleu 3",
+      "desc": "Depart Jaune 3",
       "active": true,
       "points": [
         {
