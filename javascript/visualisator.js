@@ -241,18 +241,14 @@ function loadTable(jsonTable, flip = false) {
     });
     stage.update();
 
-    deleteZone('start0');
+    // todo add button to clear start zone
     deleteZone('start0_1');
-//    deleteZone('start0_2');
+    deleteZone('start0_2');
     deleteZone('start0_3');
-    deleteZone('start0_4');
-    deleteZone('start0_5');
-    deleteZone('start3000');
-    deleteZone('start3000_1');
-//    deleteZone('start3000_2');
-    deleteZone('start3000_3');
-    deleteZone('start3000_4');
-    deleteZone('start3000_5');
+
+    //deleteZone('start3000_1');
+    //deleteZone('start3000_2');
+    //deleteZone('start3000_3');
 }
 
 /**
@@ -703,7 +699,7 @@ function loadFiles() {
 function connectSocket() {
     var socket = null;
     try {
-        socket = new WebSocket("ws://192.168.0.103:4269");
+        socket = new WebSocket("ws://192.168.42.103:4269");
     } catch (exception) {
         console.error(exception);
     }
