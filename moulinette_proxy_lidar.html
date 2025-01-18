@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>ESIAL Robotik 🐰 - Visualisation des points du proxy lidar esp32</title>
+        <style>
+            #repere {
+                display: -webkit-inline-box;
+                margin-top: -158;
+                margin-left: 457;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ESIAL Robotik 🐰- Visualisation des points du proxy lidar esp32</h1>
+        <p>
+            Permet de visualiser les points bruts renvoyés apr le proxy lidar.<br>
+            Le point rose est le centre du robot.<br>
+            <a href="https://github.com/EsialRobotik/Simulateur" target="_blank">Accès au repos</a>
+        </p>
+        <canvas id="canvas" width="640" height="480" style="border: 1px black solid;"></canvas>
+        <br>
+        <svg id="repere" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150"><!-- svg-source:excalidraw --><metadata></metadata><defs><style class="style-fonts">
+            @font-face { font-family: Excalifont; src: url(data:font/woff2;base64,d09GMgABAAAAAAOAAA4AAAAABnQAAAMrAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgQAcNAZgADQRCAqDWIMDCwgAATYCJAMMBCAFgxgHIBsmBciOxDiGcinCZHITD/3v1+7M+4tY2ohYEj1dLBFFvCQtdUPFUqCRIZU9wNOumpwMyiArGZV2b7JTN/ntQVrnU7StOhZIF+jSscQSTAOZIAEv8MAWUBegpnMz0RwnPTgT4fuoFncX6AKEkEIIdJhhi77q6h0MUhcVhdkgdVOYkgVSjwnFuSCFDn8j9pBSmAtcJKGS7NAm9R5gijKqAl7IsfqU08gcQz45D5gHMF1lMKUfGNqykxoOYJ1N4hgM/QYow0KrG26+cBB2RZTS/53AKKWUUgygAUC8UcMBDOJCoqCOJsimGwQqEP69JhvAbrhsEuxx0WQDFZJLiwM0Zn0DgAoQ4sgxZyuKLzPx6kSZoYvBw5Niw9qLqjiKjy8/Qdlgd8OKOA6TueH+/f0ovkGc4O3SIPcdQpbEV1is/B0OEHtWxE8gMHxV7Gow1I8h5DWdkX0kMiI2vBrSiTIVG25IzUzLoTiOo/gyPo5Po9flGq6jDSzeHQi56ZrkmMbSihpxQ/xGGCG+NLI0gozIBJ+1nroqM3xVYlQng7LSIqe4Jzy9R4ReMfHDIISyVU334fRjYQXhR0pzJjx8JU6B/LLS6tzeyopllOBajVjTL80CEgH6ueMXFE9K/qZtDTXKYvNvOKJw3nzGQ2edvXJSoSj1vTGa17bNSFk9Rl5eSQTuWvPmZAiJIlEopP0ICys5wbIcedzzohnipYIKuwjy0ngSCEl+bv9gjf0FxwRanK0NHR3UfNmDBv0mrMpTJ0hmqpgurWRPnGj69isAAsHT2POTcYLW37h4aS8BfxWazgD8z7+pYjf/r6K/plsAaJMgeAinJtLAf39rIGDrUhLBJYtBOY1BBwXFL7SARAgsAkCrfTRRcQOPLh8y1O0nU493shjTSlZGJZI185SXaDEKrCmXJEG2DKny5CqmI1CKNCWyJSgUKkWhIhldFGNAl359sRU32SrkS1cEY0SXIYw6I4YMmdGwc2BFW3tnQdz4spKKUd2qTnxrvgqFMqRJVwyjLokGjCF9hoxhElXA1DOTFUpQRhfGQbZsmK4XXWoKQcqjSqVIposGNP8DAwAAAAA=); }</style></defs><g stroke-linecap="round"><g transform="translate(138.12 127.5) rotate(0 1 -50.5)"><path d="M-0.55 -0.65 C-0.51 -17.68, 1.05 -84.79, 1.45 -101.37 M1.36 1.62 C1.09 -15.31, 0.27 -82.76, 0.22 -100.03" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(138.12 127.5) rotate(0 1 -50.5)"><path d="M8.96 -76.61 C4.23 -86.9, 1.21 -95.55, 0.22 -100.03 M8.96 -76.61 C6.23 -86.05, 2.64 -93.6, 0.22 -100.03" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(138.12 127.5) rotate(0 1 -50.5)"><path d="M-8.14 -76.46 C-6.05 -86.73, -2.24 -95.44, 0.22 -100.03 M-8.14 -76.46 C-4.46 -86.01, -1.65 -93.62, 0.22 -100.03" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g></g><mask></mask><g stroke-linecap="round"><g transform="translate(138.12 130.5) rotate(0 -51 0)"><path d="M0.85 0.32 C-16.19 0.46, -84.78 -0.35, -101.73 -0.25 M-0.16 -0.56 C-17.37 -0.14, -85.73 1.22, -102.53 1.16" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(138.12 130.5) rotate(0 -51 0)"><path d="M-79.13 -7.63 C-86.69 -4.01, -95.64 0.52, -102.53 1.16 M-79.13 -7.63 C-88.67 -5.26, -96.55 -1.95, -102.53 1.16" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(138.12 130.5) rotate(0 -51 0)"><path d="M-78.96 9.47 C-86.42 7.24, -95.44 5.92, -102.53 1.16 M-78.96 9.47 C-88.6 5.4, -96.55 2.28, -102.53 1.16" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g></g><mask></mask><g transform="translate(10 109.5) rotate(0 69.56 23.5)"><text x="0" y="33.12559999999999" font-family="Excalifont, Xiaolai, Segoe UI Emoji" font-size="37.59999999999999px" fill="#1e1e1e" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Y</text></g><g transform="translate(150.55999999999995 10) rotate(0 69.56 23.5)"><text x="0" y="33.12559999999999" font-family="Excalifont, Xiaolai, Segoe UI Emoji" font-size="37.59999999999999px" fill="#1e1e1e" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">X</text></g></svg>
+        <br>
+            Points courants : <span id="pointsText"></span>
+        <br>
+        <button onclick="previous();">Précédent</button>
+        <button onclick="reset();">Reset</button>
+        <button onclick="next();">Suivant</button>
+        <br>
+        <textarea id="input" onkeyup="parse();" rows="10" cols="40"></textarea>
+    </body>
+    <script>
+        const txtInput = document.getElementById('input');
+        const libPoints = document.getElementById('pointsText');
+        const can = document.getElementById('canvas').getContext("2d");
+        let cursor = -1;
+        let list = [];
+
+        const xoffset = can.canvas.width/2;
+        const yoffset = can.canvas.height/2;
+        circleradius = 40;
+
+        function parse() {
+            list.length = 0;
+            const lignes = txtInput.value.split('\n').map(e => {
+                const valeurs = e.trim().split('#').map(coordonnees => coordonnees.split(';').map(p => parseFloat(p)));
+                list.push(valeurs);
+            });
+            display();
+        };
+
+        function next() {
+            cursor++;
+            if (cursor >= list.length) {
+                cursor = list.length-1;
+            }
+            display();
+        }
+
+        function previous() {
+            cursor--;
+            if (cursor < -1) {
+                cursor = -1;
+            }
+            display();
+        }
+
+        function reset() {
+            cursor = 0;
+            display();
+        }
+
+        function display() {
+            libPoints.innerHTML = '';
+            if (cursor < 0 || cursor >= list.length) {
+                cursor = 0;
+                return;
+            }
+
+            can.clearRect(0, 0, can.canvas.width, can.canvas.height);
+
+            // Notre beau roboot
+            can.fillStyle = 'pink';
+            can.strokeStyle = 'black';
+            can.lineWidth = 2;
+            can.beginPath();
+            can.arc(xoffset, yoffset, 20, 0, 2*Math.PI);
+            can.fill();
+            can.beginPath();
+            can.arc(xoffset, yoffset, 20, 0, 2*Math.PI);
+            can.stroke();
+
+
+            can.fillStyle = 'red';
+            can.strokeStyle = 'black';
+            can.lineWidth = 4;
+            const valeurs = list[cursor];
+            valeurs.forEach(p => {
+                libPoints.innerText += p[0] + 'X ' + p[1] + 'Y / ';
+
+                can.beginPath();
+                can.arc(-p[1]/2 + xoffset, -p[0]/2 + yoffset, circleradius, 0, 2*Math.PI);
+                can.fill();
+                can.beginPath();
+                can.arc(-p[1]/2 + xoffset, -p[0]/2 + yoffset, circleradius, 0, 2*Math.PI);
+                can.stroke();
+            });
+
+
+        }
+
+        parse();
+        next();
+    </script>
+</html>
