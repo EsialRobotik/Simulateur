@@ -1,0 +1,503 @@
+{
+  "sizeX": 2000,
+  "sizeY": 3000,
+  "color0": "jaune",
+  "color3000": "bleu",
+  "marge": 180,
+  "forbiddenZones": [
+    {
+      "id": "rampe_jaune",
+      "forme": "polygone",
+      "desc": "Rampe jaune",
+      "type": "jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 650
+        },
+        {
+          "x": 0,
+          "y": 1050
+        },
+        {
+          "x": 200,
+          "y": 1050
+        },
+        {
+          "x": 200,
+          "y": 650
+        }
+      ]
+    },
+    {
+      "id": "scene",
+      "forme": "polygone",
+      "desc": "Scéne",
+      "type": "jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 1050
+        },
+        {
+          "x": 0,
+          "y": 1950
+        },
+        {
+          "x": 450,
+          "y": 1950
+        },
+        {
+          "x": 450,
+          "y": 1050
+        }
+      ]
+    },
+    {
+      "id": "rampe_bleu",
+      "forme": "polygone",
+      "desc": "Rampe bleu",
+      "type": "bleu",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 1950
+        },
+        {
+          "x": 0,
+          "y": 2350
+        },
+        {
+          "x": 200,
+          "y": 2350
+        },
+        {
+          "x": 200,
+          "y": 1950
+        }
+      ]
+    }
+  ],
+  "dynamicZones": [
+    {
+      "id": "start_jaune_back",
+      "forme": "polygone",
+      "desc": "Départ jaune backstage",
+      "type": "jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 150
+        },
+        {
+          "x": 0,
+          "y": 600
+        },
+        {
+          "x": 450,
+          "y": 600
+        },
+        {
+          "x": 450,
+          "y": 150
+        }
+      ]
+    },
+    {
+      "id": "start_bleu_back",
+      "forme": "polygone",
+      "desc": "Départ bleu backstage",
+      "type": "bleu",
+      "active": true,
+      "points": [
+        {
+          "x": 0,
+          "y": 2850
+        },
+        {
+          "x": 0,
+          "y": 2400
+        },
+        {
+          "x": 450,
+          "y": 2400
+        },
+        {
+          "x": 450,
+          "y": 2850
+        }
+      ]
+    },
+    {
+      "id": "start_bleu_side",
+      "forme": "polygone",
+      "desc": "Départ bleu side",
+      "type": "bleu",
+      "active": true,
+      "points": [
+        {
+          "x": 900,
+          "y": 0
+        },
+        {
+          "x": 900,
+          "y": 450
+        },
+        {
+          "x": 1350,
+          "y": 450
+        },
+        {
+          "x": 1350,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "start_jaune_side",
+      "forme": "polygone",
+      "desc": "Départ jaune side",
+      "type": "jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 900,
+          "y": 3000
+        },
+        {
+          "x": 900,
+          "y": 2550
+        },
+        {
+          "x": 1350,
+          "y": 2550
+        },
+        {
+          "x": 1350,
+          "y": 3000
+        }
+      ]
+    },
+
+    {
+      "id": "start_jaune_front",
+      "forme": "polygone",
+      "desc": "Départ jaune front",
+      "type": "jaune",
+      "active": true,
+      "points": [
+        {
+          "x": 2000,
+          "y": 1000
+        },
+        {
+          "x": 2000,
+          "y": 1450
+        },
+        {
+          "x": 1550,
+          "y": 1450
+        },
+        {
+          "x": 1550,
+          "y": 1000
+        }
+      ]
+    },
+    {
+      "id": "start_bleu_front",
+      "forme": "polygone",
+      "desc": "Départ bleu front",
+      "type": "bleu",
+      "active": true,
+      "points": [
+        {
+          "x": 2000,
+          "y": 2000
+        },
+        {
+          "x": 2000,
+          "y": 1550
+        },
+        {
+          "x": 1550,
+          "y": 1550
+        },
+        {
+          "x": 1550,
+          "y": 2000
+        }
+      ]
+    },
+
+    {
+      "id": "gradin_nno",
+      "forme": "polygone",
+      "desc": "Gradin NNO",
+      "active": true,
+      "points": [
+        {
+          "x": 225,
+          "y": 625
+        },
+        {
+          "x": 225,
+          "y": 1025
+        },
+        {
+          "x": 325,
+          "y": 1025
+        },
+        {
+          "x": 325,
+          "y": 625
+        }
+      ]
+    },
+    {
+      "id": "gradin_nne",
+      "forme": "polygone",
+      "desc": "Gradin NNE",
+      "active": true,
+      "points": [
+        {
+          "x": 225,
+          "y": 1975
+        },
+        {
+          "x": 225,
+          "y": 2375
+        },
+        {
+          "x": 325,
+          "y": 2375
+        },
+        {
+          "x": 325,
+          "y": 1975
+        }
+      ]
+    },
+    {
+      "id": "gradin_ono",
+      "forme": "polygone",
+      "desc": "Gradin ONO",
+      "active": true,
+      "points": [
+        {
+          "x": 475,
+          "y": 25
+        },
+        {
+          "x": 475,
+          "y": 125
+        },
+        {
+          "x": 875,
+          "y": 125
+        },
+        {
+          "x": 875,
+          "y": 25
+        }
+      ]
+    },
+    {
+      "id": "gradin_ene",
+      "forme": "polygone",
+      "desc": "Gradin EN",
+      "active": true,
+      "points": [
+        {
+          "x": 475,
+          "y": 2975
+        },
+        {
+          "x": 475,
+          "y": 2875
+        },
+        {
+          "x": 875,
+          "y": 2875
+        },
+        {
+          "x": 875,
+          "y": 2975
+        }
+      ]
+    },
+    {
+      "id": "gradin_oso",
+      "forme": "polygone",
+      "desc": "Gradin OSO",
+      "active": true,
+      "points": [
+        {
+          "x": 1400,
+          "y": 25
+        },
+        {
+          "x": 1400,
+          "y": 125
+        },
+        {
+          "x": 1800,
+          "y": 125
+        },
+        {
+          "x": 1800,
+          "y": 25
+        }
+      ]
+    },
+    {
+      "id": "gradin_ese",
+      "forme": "polygone",
+      "desc": "Gradin ESE",
+      "active": true,
+      "points": [
+        {
+          "x": 1400,
+          "y": 2975
+        },
+        {
+          "x": 1400,
+          "y": 2875
+        },
+        {
+          "x": 1800,
+          "y": 2875
+        },
+        {
+          "x": 1800,
+          "y": 2975
+        }
+      ]
+    },
+    {
+      "id": "gradin_o",
+      "forme": "polygone",
+      "desc": "Gradin O",
+      "active": true,
+      "points": [
+        {
+          "x": 1000,
+          "y": 900
+        },
+        {
+          "x": 1000,
+          "y": 1300
+        },
+        {
+          "x": 1100,
+          "y": 1300
+        },
+        {
+          "x": 1100,
+          "y": 900
+        }
+      ]
+    },
+    {
+      "id": "gradin_e",
+      "forme": "polygone",
+      "desc": "Gradin E",
+      "active": true,
+      "points": [
+        {
+          "x": 1000,
+          "y": 2100
+        },
+        {
+          "x": 1000,
+          "y": 1700
+        },
+        {
+          "x": 1100,
+          "y": 1700
+        },
+        {
+          "x": 1100,
+          "y": 2100
+        }
+      ]
+    },
+    {
+      "id": "gradin_so",
+      "forme": "polygone",
+      "desc": "Gradin SO",
+      "active": true,
+      "points": [
+        {
+          "x": 1700,
+          "y": 575
+        },
+        {
+          "x": 1700,
+          "y": 975
+        },
+        {
+          "x": 1800,
+          "y": 975
+        },
+        {
+          "x": 1800,
+          "y": 575
+        }
+      ]
+    },
+    {
+      "id": "gradin_se",
+      "forme": "polygone",
+      "desc": "Gradin SE",
+      "active": true,
+      "points": [
+        {
+          "x": 1700,
+          "y": 2425
+        },
+        {
+          "x": 1700,
+          "y": 2025
+        },
+        {
+          "x": 1800,
+          "y": 2025
+        },
+        {
+          "x": 1800,
+          "y": 2425
+        }
+      ]
+    }
+  ],
+  "detectionIgnoreZone": [
+    {
+      "id": "detection_scene",
+      "forme": "polygone",
+      "desc": "Détection scène",
+      "points": [
+        {
+          "x": 0,
+          "y": 650
+        },
+        {
+          "x": 0,
+          "y": 2350
+        },
+        {
+          "x": 450,
+          "y": 2350
+        },
+        {
+          "x": 450,
+          "y": 650
+        }
+      ]
+    }
+  ]
+}

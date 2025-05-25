@@ -1,0 +1,929 @@
+[
+    {
+        "task": "Position de d\u00e9part",
+        "command": "start",
+        "position": {
+            "x": 1750,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Suppression zone de d\u00e9part",
+        "command": "delete-zone#start_bleu_back",
+        "position": {
+            "x": 1750,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Suppression zone de d\u00e9part",
+        "command": "delete-zone#start_bleu_side",
+        "position": {
+            "x": 1750,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Suppression zone de d\u00e9part",
+        "command": "delete-zone#start_bleu_front",
+        "position": {
+            "x": 1750,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Vitesse de d\u00e9pose banderole",
+        "command": "speed#25",
+        "position": {
+            "x": 1750,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Position d\u00e9pose banderole",
+        "command": "go#80",
+        "position": {
+            "x": 1830,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "D\u00e9pose banderole",
+        "command": "action#ascenseur_depose_bordure",
+        "position": {
+            "x": 1830,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Recule banderole",
+        "command": "go#-320",
+        "position": {
+            "x": 1510,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Vitesse normale",
+        "command": "speed#100",
+        "position": {
+            "x": 1510,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Ascenseur survole plateforme",
+        "command": "action#ascenseur_survole_plateformes",
+        "position": {
+            "x": 1510,
+            "y": 1775,
+            "theta": 0.0
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin SO / SE",
+        "command": "goto-astar#1510;1770",
+        "position": {
+            "x": 1510,
+            "y": 1770,
+            "theta": -1.5707963267948966
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin SO / SE",
+        "command": "goto-astar#1300;1980",
+        "position": {
+            "x": 1300,
+            "y": 1980,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin SO / SE",
+        "command": "goto-astar#1300;2220",
+        "position": {
+            "x": 1300,
+            "y": 2220,
+            "theta": 1.5707963267948966
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin SO / SE",
+        "command": "goto#1300;2225",
+        "position": {
+            "x": 1300,
+            "y": 2225,
+            "theta": 1.5707963267948966
+        }
+    },
+    {
+        "task": "Alignement sur le gradin SO / SE",
+        "command": "face#2000;2225",
+        "position": {
+            "x": 1300,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Placement gradin SO / SE",
+        "command": "goto#1540;2225",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur appui sur les plateformes",
+        "command": "action#ascenseur_appui_plateformes",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Allumage pompe plateforme",
+        "command": "action#pompe_superieur_aspirer",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Allumage pompe interieur",
+        "command": "action#pompe_interieur_aspirer",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Allumage pompe exterieur",
+        "command": "action#pompe_exterieur_aspirer",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Sortie des pinces",
+        "command": "action#pinces_sortir",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Attente de la prise du gradin",
+        "command": "wait#250",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Rentr\u00e9e des pinces",
+        "command": "action#pinces_rentrer",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Recule gradin",
+        "command": "go#-50",
+        "position": {
+            "x": 1490,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur tout en haut",
+        "command": "action#ascenseur_tout_en_haut",
+        "position": {
+            "x": 1490,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Avance gradin",
+        "command": "go#50",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Sortie des pinces",
+        "command": "action#pinces_sortir",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur depose haut",
+        "command": "action#ascenseur_tout_en_haut_depose",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Suppression zone de d\u00e9pose du gradin SE",
+        "command": "delete-zone#gradin_se",
+        "position": {
+            "x": 1540,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Zone de d\u00e9pose du gradin SO / SE",
+        "command": "goto#1750;2225",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Alignement d\u00e9pose gradin SO / SE",
+        "command": "face#2000;2225",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Souffler pompe interieur",
+        "command": "action#pompe_interieur_souffler",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Attente souffle",
+        "command": "wait#250",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Arret pompe interieur",
+        "command": "action#pompe_interieur_off",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Arret pompe superieur",
+        "command": "action#pompe_superieur_off",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Souffler pompe exterieur",
+        "command": "action#pompe_exterieur_souffler",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Attente souffle",
+        "command": "wait#250",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Arret pompe exterieur",
+        "command": "action#pompe_exterieur_off",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur tout en haut",
+        "command": "action#ascenseur_tout_en_haut",
+        "position": {
+            "x": 1750,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Recule gradin",
+        "command": "go#-50",
+        "position": {
+            "x": 1700,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Rentr\u00e9e des pinces",
+        "command": "action#pinces_rentrer",
+        "position": {
+            "x": 1700,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur survole plateforme",
+        "command": "action#ascenseur_survole_plateformes",
+        "position": {
+            "x": 1700,
+            "y": 2225,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Recule gradin SO / SE",
+        "command": "goto#1500;2300",
+        "position": {
+            "x": 1500,
+            "y": 2300,
+            "theta": 2.766592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1500;2300",
+        "position": {
+            "x": 1500,
+            "y": 2300,
+            "theta": 2.766592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1290;2090",
+        "position": {
+            "x": 1290,
+            "y": 2090,
+            "theta": 4.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1280;2090",
+        "position": {
+            "x": 1280,
+            "y": 2090,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1280;2150",
+        "position": {
+            "x": 1280,
+            "y": 2150,
+            "theta": 1.5707963267948966
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1270;2160",
+        "position": {
+            "x": 1270,
+            "y": 2160,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1270;2180",
+        "position": {
+            "x": 1270,
+            "y": 2180,
+            "theta": 1.5707963267948966
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1250;2200",
+        "position": {
+            "x": 1250,
+            "y": 2200,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1250;2210",
+        "position": {
+            "x": 1250,
+            "y": 2210,
+            "theta": 1.5707963267948966
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1210;2250",
+        "position": {
+            "x": 1210,
+            "y": 2250,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1200;2250",
+        "position": {
+            "x": 1200,
+            "y": 2250,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1180;2270",
+        "position": {
+            "x": 1180,
+            "y": 2270,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1160;2270",
+        "position": {
+            "x": 1160,
+            "y": 2270,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#1150;2280",
+        "position": {
+            "x": 1150,
+            "y": 2280,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#950;2280",
+        "position": {
+            "x": 950,
+            "y": 2280,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#940;2270",
+        "position": {
+            "x": 940,
+            "y": 2270,
+            "theta": 4.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#920;2270",
+        "position": {
+            "x": 920,
+            "y": 2270,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#900;2250",
+        "position": {
+            "x": 900,
+            "y": 2250,
+            "theta": 4.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#890;2250",
+        "position": {
+            "x": 890,
+            "y": 2250,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#750;2110",
+        "position": {
+            "x": 750,
+            "y": 2110,
+            "theta": 4.141592653589793
+        }
+    },
+    {
+        "task": "Positionnement sur le gradin O / E",
+        "command": "goto-astar#750;1900",
+        "position": {
+            "x": 750,
+            "y": 1900,
+            "theta": -1.5707963267948966
+        }
+    },
+    {
+        "task": "Alignement sur le gradin O / E",
+        "command": "face#2000;1900",
+        "position": {
+            "x": 750,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Placement gradin O / E",
+        "command": "goto#830;1900",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur appui sur les plateformes",
+        "command": "action#ascenseur_appui_plateformes",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Allumage pompe plateforme",
+        "command": "action#pompe_superieur_aspirer",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Allumage pompe interieur",
+        "command": "action#pompe_interieur_aspirer",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Allumage pompe exterieur",
+        "command": "action#pompe_exterieur_aspirer",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Sortie des pinces",
+        "command": "action#pinces_sortir",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Attente de la prise du gradin",
+        "command": "wait#250",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Rentr\u00e9e des pinces",
+        "command": "action#pinces_rentrer",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Recule gradin",
+        "command": "go#-50",
+        "position": {
+            "x": 780,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur tout en haut",
+        "command": "action#ascenseur_tout_en_haut",
+        "position": {
+            "x": 780,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Avance gradin",
+        "command": "go#50",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Sortie des pinces",
+        "command": "action#pinces_sortir",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur depose haut",
+        "command": "action#ascenseur_tout_en_haut_depose",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Suppression zone de d\u00e9pose du gradin E",
+        "command": "delete-zone#gradin_e",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Zone de d\u00e9pose du gradin O / E",
+        "command": "goto-astar#830;1900",
+        "position": {
+            "x": 830,
+            "y": 1900,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Zone de d\u00e9pose du gradin O / E",
+        "command": "goto-astar#950;1780",
+        "position": {
+            "x": 950,
+            "y": 1780,
+            "theta": -1.0
+        }
+    },
+    {
+        "task": "Zone de d\u00e9pose du gradin O / E",
+        "command": "goto-astar#1750;1780",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Alignement d\u00e9pose gradin O / E",
+        "command": "face#2000;1780",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Souffler pompe interieur",
+        "command": "action#pompe_interieur_souffler",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Attente souffle",
+        "command": "wait#250",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Arret pompe interieur",
+        "command": "action#pompe_interieur_off",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Arret pompe superieur",
+        "command": "action#pompe_superieur_off",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Souffler pompe exterieur",
+        "command": "action#pompe_exterieur_souffler",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Attente souffle",
+        "command": "wait#250",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Arret pompe exterieur",
+        "command": "action#pompe_exterieur_off",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur tout en haut",
+        "command": "action#ascenseur_tout_en_haut",
+        "position": {
+            "x": 1750,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Recule gradin",
+        "command": "go#-50",
+        "position": {
+            "x": 1700,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Rentr\u00e9e des pinces",
+        "command": "action#pinces_rentrer",
+        "position": {
+            "x": 1700,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Ascenseur survole plateforme",
+        "command": "action#ascenseur_survole_plateformes",
+        "position": {
+            "x": 1700,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#1700;1780",
+        "position": {
+            "x": 1700,
+            "y": 1780,
+            "theta": 0
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#1110;2370",
+        "position": {
+            "x": 1110,
+            "y": 2370,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#850;2370",
+        "position": {
+            "x": 850,
+            "y": 2370,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#840;2380",
+        "position": {
+            "x": 840,
+            "y": 2380,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#820;2380",
+        "position": {
+            "x": 820,
+            "y": 2380,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#800;2400",
+        "position": {
+            "x": 800,
+            "y": 2400,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#790;2400",
+        "position": {
+            "x": 790,
+            "y": 2400,
+            "theta": 3.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#630;2560",
+        "position": {
+            "x": 630,
+            "y": 2560,
+            "theta": 2.141592653589793
+        }
+    },
+    {
+        "task": "Go backstage",
+        "command": "goto-astar#630;2690",
+        "position": {
+            "x": 630,
+            "y": 2690,
+            "theta": 1.5707963267948966
+        }
+    },
+    {
+        "task": "Alignement backstage",
+        "command": "face#0;2690",
+        "position": {
+            "x": 630,
+            "y": 2690,
+            "theta": 3.141592653589793
+        }
+    }
+]

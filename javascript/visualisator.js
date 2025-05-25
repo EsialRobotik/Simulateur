@@ -204,34 +204,34 @@ function loadTable(jsonTable, flip = false) {
 
     // Zones interdites fixes
     jsonTable.forbiddenZones.forEach(zone => {
-        displayZone(zone, jsonTable, 'rgba(255,0,0,0.6)', 'rgba(200,0,0,0.4)');
+        displayZone(zone, jsonTable, 'rgba(0,0,255,0.6)', 'rgba(0,0,200,0.4)');
     });
 
     // Bordure haut
     var shape = new createjs.Shape();
     shape.graphics
-        .beginFill('rgba(200,0,0,0.4)')
+        .beginFill('rgba(200,0,0,0.2)')
         .drawRect(0, 0, flip ? 2000 : 3000, jsonTable.marge);
     stage.addChild(shape);
 
     // Bordure bas
     shape = new createjs.Shape();
     shape.graphics
-        .beginFill('rgba(200,0,0,0.4)')
+        .beginFill('rgba(200,0,0,0.2)')
         .drawRect(0, (flip ? 3000 : 2000) - jsonTable.marge, flip ? 2000 : 3000, flip ? 3000 : 2000);
     stage.addChild(shape);
 
     // Bordure gauche
     shape = new createjs.Shape();
     shape.graphics
-        .beginFill('rgba(200,0,0,0.4)')
+        .beginFill('rgba(200,0,0,0.2)')
         .drawRect(0, 0, jsonTable.marge, flip ? 3000 : 2000);
     stage.addChild(shape);
 
     // Bordure droite
     shape = new createjs.Shape();
     shape.graphics
-        .beginFill('rgba(200,0,0,0.4)')
+        .beginFill('rgba(200,0,0,0.2)')
         .drawRect((flip ? 2000 : 3000) - jsonTable.marge, 0, flip ? 2000 : 3000, flip ? 3000 : 2000);
     stage.addChild(shape);
 
@@ -240,48 +240,6 @@ function loadTable(jsonTable, flip = false) {
         displayZone(zone, jsonTable, 'rgba(255,255,0,0.6)', 'rgba(255,165,0,0.4)');
     });
     stage.update();
-
-    // todo add button to clear start zone
-    deleteZone('start0_1');
-    deleteZone('start0_2');
-    deleteZone('start0_3');
-
-    //deleteZone('start3000_1');
-    //deleteZone('start3000_2');
-    //deleteZone('start3000_3');
-}
-
-/**
- * Chargement du fichier tbl pour validation
- *
- */
-function loadTbl() {
-    var file = document.getElementById('tblCheck');
-    if (file && file.files && file.files.length) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            var tblArray = e.target.result.split('\n');
-            var size = tblArray.shift().split(' ');
-            for (var y = 0; y < size[1]/10; y++) {
-                for (var x = 0; x < size[0]/10; x++) {
-                    if (tblArray[x].charAt(y) == 'x') {
-                        var shape = new createjs.Shape();
-                        tblArray.forEach(value => {
-                            shape
-                                .graphics
-                                .beginFill('rgba(255,0,0,0.4)')
-                                .drawRect(y*10, x*10, 9, 9);
-                        });
-                        stage.addChild(shape);
-                    }
-                }
-            }
-            stage.update();
-        };
-        reader.readAsBinaryString(file.files[0]);
-
-        return true;
-    }
 }
 
 /**
@@ -693,7 +651,6 @@ function sleep(ms) {
 function loadFiles() {
     loadStratLog();
     loadStratLogPmi();
-    loadTbl();
 }
 
 function connectSocket() {

@@ -1,4 +1,4 @@
-var currentYear = 2024;
+var currentYear = 2025;
 var rotateTable = false;
 
 var bigRobot = `resources/${currentYear}/bigPrincess.png`;
